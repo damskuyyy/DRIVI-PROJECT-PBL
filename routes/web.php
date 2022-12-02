@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +29,9 @@ Route::middleware([
     })->name('dashboard');
 });
 
+// Route Homepage
+Route::get('/homepage', [AdminController::class, 'home'])->name('admin.frontend.homepage');
+Route::get('/detail', [AdminController::class, 'detail'])->name('admin.frontend.detail');
+Route::get('/contact', [AdminController::class, 'contact'])->name('admin.frontend.contact');
+// Route Logout
 Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
