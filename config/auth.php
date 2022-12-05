@@ -44,7 +44,6 @@ return [
         'api' => [
             'driver' => 'passport',
             'provider' => 'users',
-            'bash' => false,
         ],
     ],
 
