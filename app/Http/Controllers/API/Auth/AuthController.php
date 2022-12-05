@@ -11,11 +11,11 @@ class AuthController extends Controller
 {
     public function register(Request $request)
     {
-        // $validateData = $request->validate([
-        //     'name' => 'required|max:25',
-        //     'email' => 'email | required | unique:users',
-        //     'password' => 'required | confirmed'
-        // ]);
+        $validateData = $request->validate([
+            'name' => 'required|max:25',
+            'email' => 'email | required | unique:users',
+            'password' => 'required | confirmed'
+        ]);
 
         // create user
         $user = new User([
