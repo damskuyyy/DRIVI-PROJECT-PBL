@@ -52,7 +52,7 @@
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                                 aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
+                                <button class="btn btn-dark" type="button">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
@@ -247,7 +247,7 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-dark shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 
@@ -289,7 +289,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="#">Logout</a>
+                    <a class="btn btn-danger" href="{{route('admin.logout') }}">Logout</a>
                 </div>
             </div>
         </div>
