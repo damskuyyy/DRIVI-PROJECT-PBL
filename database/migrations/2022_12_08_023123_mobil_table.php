@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('mobil', function (Blueprint $table)){
+        Schema::create('mobil', function (Blueprint $table) {
             $table->id();
             $table->string('nama_mobil');
             $table->string('jenis_mobil');
@@ -22,7 +22,7 @@ return new class extends Migration
             $table->integer('jumlah_kursi');
             $table->string('bahan_bakar');
             $table->string('jenis_transmisi');
-        }
+        });
     }
 
     /**
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('failed_jobs');
     }
 };
