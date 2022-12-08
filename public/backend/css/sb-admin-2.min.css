@@ -5972,7 +5972,7 @@ button.bg-light:hover {
     background-color: #d4daed !important;
 }
 .bg-dark {
-    background-color: #5a5c69 !important;
+    background-color: #1A1346 !important;
 }
 a.bg-dark:focus,
 a.bg-dark:hover,
@@ -9926,7 +9926,7 @@ a:focus {
     }
 }
 .bg-login-image {
-    background: url(https://source.unsplash.com/K4mSJ7kc0As/600x800);
+    background: ur("../images/background/bg-login.jpg");
     background-position: center;
     background-size: cover;
 }

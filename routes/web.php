@@ -15,9 +15,9 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::middleware([
     'auth:sanctum',
@@ -41,7 +41,7 @@ Route::middleware([
 // });
 
 // Route Homepage
-Route::get('/homepage', [AdminController::class, 'home'])->name('admin.frontend.homepage');
+Route::get('/', [AdminController::class, 'home'])->name('admin.frontend.homepage');
 Route::get('/detail', [AdminController::class, 'detail'])->name('admin.frontend.detail');
 Route::get('/contact', [AdminController::class, 'contact'])->name('admin.frontend.contact');
 // Route Logout
