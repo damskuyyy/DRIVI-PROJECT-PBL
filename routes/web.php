@@ -29,6 +29,17 @@ Route::middleware([
     })->name('dashboard');
 });
 
+
+// Jangan dihapus
+// Route::prefix('user')->group(function(){
+//     Route::get('/user/view',[UserController::class, 'UserView'])->name('user.view');
+//     Route::get('/user/add',[UserController::class, 'UserAdd'])->name('user.add');
+//     Route::post('/user/store',[UserController::class, 'UserStore'])->name('users.store');
+//     Route::get('/edit/{id}',[UserController::class, 'UserEdit'])->name('users.edit');
+//     Route::post('/update/{id}',[UserController::class, 'UserUpdate'])->name('users.update');
+//     Route::get('/delete/{id}',[UserController::class, 'UserDelete'])->name('users.delete');
+// });
+
 // Route Homepage
 Route::get('/homepage', [AdminController::class, 'home'])->name('admin.frontend.homepage');
 Route::get('/detail', [AdminController::class, 'detail'])->name('admin.frontend.detail');
