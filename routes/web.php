@@ -46,3 +46,4 @@ Route::get('/detail', [AdminController::class, 'detail'])->name('admin.frontend.
 Route::get('/contact', [AdminController::class, 'contact'])->name('admin.frontend.contact');
 // Route Logout
 Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
+

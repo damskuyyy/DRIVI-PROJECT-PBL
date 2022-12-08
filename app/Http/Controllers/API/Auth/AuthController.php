@@ -46,6 +46,7 @@ class AuthController extends Controller
         }
 
         $user = $request->user();
+        // $token = $request->user()->createToken($request->token_name);
 
         $tokenResult = $user->createToken('AccessToken');
         $token = $tokenResult->token;
