@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\API\Auth\AuthController;
+use App\Http\Controllers\API\Owner\MobilController;
 use App\Http\Controllers\API\Transaction\TransactionController;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +21,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/register', [AuthController::class, 'register']);
-Route::post('/login',[AuthController::class, 'login']);
-Route::post('/sewa',[TransactionController::class,'createTransaction']);
+Route::post('register', [AuthController::class, 'register']);
+Route::post('login',[AuthController::class, 'login']);
+
+Route::get('mobil',[MobilController::class, 'index']);
+Route::post('mobil/add',[MobilController::class, 'add']);
+
+Route::get('sewa',[TransactionController::class, 'index']);
+Route::post('sewa/add',[TransactionController::class, 'add']);

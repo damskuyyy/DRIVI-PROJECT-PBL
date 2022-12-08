@@ -13,17 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('transaksi', function (Blueprint $table) {
+        Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_user');
             $table->bigInteger('id_mobil');
             $table->datetime('tanggal_transaksi');
             $table->string('status_transaksi');
             $table->datetime('tanggal_sewa');
-            $table->datetime('tanggal_pengembalian');
+            $table->datetime('tanggal_pengembalian');            
             $table->string('metode_pembayaran');
             $table->string('status_pengembalian');
             $table->integer('denda');
+            $table->timestamps();
         });
     }
 
