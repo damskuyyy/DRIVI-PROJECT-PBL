@@ -48,6 +48,12 @@
             <li class="nav-item">
               <a class="nav-link" href="{{route('admin.frontend.contact')}}">Contact</a>
             </li>
+            </li class="nav-item" class="nav-link" href="{{ ('admin.auth.login')}}">
+            <button type="button" class="btn btn-outline-dark" >LOGIN DISINI</button>
+            </li>
+            <!-- <li class="nav-item" href="{{ ('admin.auth.register')}}">
+            <button type="button" class="btn btn-outline-dark">Register</button>
+            </li> -->
           </ul>
         </div>
       </div>
