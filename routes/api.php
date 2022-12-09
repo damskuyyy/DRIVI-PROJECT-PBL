@@ -23,5 +23,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login',[AuthController::class, 'login']);
 
-Route::get('mobil',[MobilController::class, 'index']);
-Route::post('mobil/add',[MobilController::class, 'add']);
+Route::prefix('/mobil')->group(function(){
+    Route::get('/view',[MobilController::class, 'MobilView']);
+    Route::post('/add',[MobilController::class, 'MobilAdd']);
+    // Route::post('/add/{id}',[MobilController::class, 'MobilAdd'])->middleware('auth:sanctum');
+    Route::put('/update',[MobilController::class, 'MobilUpdate']);
+});

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('mobils', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_detail_owner');
+            $table->bigInteger('id_user');
             $table->string('nama_mobil');
             $table->string('jenis_mobil');
             $table->integer('harga');
