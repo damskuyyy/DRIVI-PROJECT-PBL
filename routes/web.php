@@ -35,3 +35,13 @@ Route::get('/detail', [AdminController::class, 'detail'])->name('admin.frontend.
 Route::get('/contact', [AdminController::class, 'contact'])->name('admin.frontend.contact');
 // Route Logout
 Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
+
+// Route CRUD Review Mobil
+Route::prefix('review')->group(function () {
+    Route::get('/view', [BarangController::class, 'BarangView'])->name('barang.view');
+    Route::get('/add', [BarangController::class, 'BarangAdd'])->name('barang.add');
+    // Route::post('/store', [BarangController::class, 'BarangRequest'])->name('barang.request');
+    // Route::get('/edit/{id}', [BarangController::class, 'BarangEdit'])->name('barang.edit');
+    // Route::post('/update/{id}', [BarangController::class, 'BarangUpdate'])->name('barang.update');
+    
+});
