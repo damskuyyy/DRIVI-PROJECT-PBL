@@ -1,4 +1,4 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
 <!-- Sidebar - Brand -->
 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -13,16 +13,16 @@
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="{{url('/dashboard')}}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
 </li>
 <!-- Nav Item - Homepage Sewa -->
-<li class="nav-item active">
-    <a class="nav-link" href="{{route('admin.frontend.homepage')}}">
+{{-- <li class="nav-item active">
+    <a class="nav-link" href="{{url('/dashboard')}}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Homepage Sewa</span></a>
-</li>
+</li> --}}
 
 <!-- Divider -->
 <hr class="sidebar-divider">
