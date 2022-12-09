@@ -13,7 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('reviews', function (Blueprint $table) {
+            $table->id();
+            $table->bigInteger('id_detail_user');
+            $table->bigInteger('id_mobil');
+            // $table->timestamps('tanggal_review', $precision = 0);
+            $table->integer('bintang');
+            $table->text('komentar');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('reviews');
     }
 };

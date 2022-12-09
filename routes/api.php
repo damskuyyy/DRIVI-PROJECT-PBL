@@ -25,3 +25,9 @@ Route::post('login',[AuthController::class, 'login']);
 
 Route::get('mobil',[MobilController::class, 'index']);
 Route::post('mobil/add',[MobilController::class, 'add']);
+
+// route review
+Route::get('review',[MobilController::class, 'index']);
+Route::post('mobil/add',[MobilController::class, 'add']);
+
+
