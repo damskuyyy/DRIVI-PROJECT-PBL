@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class ReviewMobil extends Model
 {
     use HasFactory;
+    protected $fillable = ['id_detail_user','id_mobil','bintang','komentar'];
 }
