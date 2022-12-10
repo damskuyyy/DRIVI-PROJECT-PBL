@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="{{asset ('backend/css/sb-admin-2.min.css')}}" rel="stylesheet">
+    
 
 </head>
 
@@ -69,7 +70,7 @@
                                         <!-- <a href="index.html" class="btn btn-facebook btn-user btn-block">
                                             <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
                                         </a> -->
-                                        <button type="submit" class="btn btn-dark btn-user btn-block" href="{{ ('auth.login') }}">LOGIN</button>
+                                        <button type="submit" class="btn btn-dark btn-user btn-block" href="{{ ('auth.login') }}">Login</button>
                                     </form>
                                     <hr>
                                     <div class="text-center">
