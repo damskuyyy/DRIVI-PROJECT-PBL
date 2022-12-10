@@ -67,7 +67,8 @@
           <h1 class="display-4 fw-bolder">Sewa Mobil</h1>
           <p class="lead fw-normal text-white-50 mb-0">
             hanya dengan satu sentuhan
-          </p>
+          </p><hr>
+          <a href="{{ url('/register')}}"><button type="button" class="btn btn-light" >Daftar Sekarang</button></a>
         </div>
       </div>
     </header>
