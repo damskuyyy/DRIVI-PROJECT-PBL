@@ -45,9 +45,9 @@
             <li class="nav-item">
               <a class="nav-link active" href="./index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contact.html">Contact</a>
-            </li>
+          </li class="nav-item" class="nav-link">
+          <a href="{{ url('/login')}}"><button type="button" class="btn btn-outline-dark" >LOGIN DISINI</button></a>
+          </li>
           </ul>
         </div>
       </div>

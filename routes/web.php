@@ -54,8 +54,8 @@ Route::get('/home',function(){
 
 // Route Homepage
 // Route::get('/', [AdminController::class, 'home'])->name('admin.frontend.index');
-Route::get('/detail', [AdminController::class, 'detail'])->name('user.detail');
-Route::get('/contact', [AdminController::class, 'contact'])->name('user.contact');
+Route::get('users/detail', [AdminController::class, 'detail'])->name('user.detail');
+Route::get('user/contact', [AdminController::class, 'contact'])->name('user.contact');
 // Route Logout
 Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
 Route::get('user/logout', [HomeController::class, 'logout'])->name('logout');
