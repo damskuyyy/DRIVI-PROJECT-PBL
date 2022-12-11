@@ -29,7 +29,7 @@
     --warning: #f6c23e;
     --danger: #e74a3b;
     --light: #f8f9fc;
-    --dark: #5a5c69;
+    --dark: #1A1346;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -2482,13 +2482,13 @@ fieldset:disabled a.btn {
 }
 .btn-dark {
     color: #fff;
-    background-color: #5a5c69;
-    border-color: #5a5c69;
+    background-color: var(--dark);
+    border-color: var(--dark)
 }
 .btn-dark:hover {
     color: #fff;
-    background-color: #484a54;
-    border-color: #42444e;
+    background-color: #130c3f;
+    border-color: #130c3f;
 }
 .btn-dark.focus,
 .btn-dark:focus {
@@ -2726,13 +2726,13 @@ fieldset:disabled a.btn {
     box-shadow: 0 0 0 0.2rem rgba(248, 249, 252, 0.5);
 }
 .btn-outline-dark {
-    color: #5a5c69;
-    border-color: #5a5c69;
+    color: var(--dark);
+    border-color: var(--dark);
 }
 .btn-outline-dark:hover {
     color: #fff;
-    background-color: #5a5c69;
-    border-color: #5a5c69;
+    background-color: #130c3f;
+    border-color: #130c3f;
 }
 .btn-outline-dark.focus,
 .btn-outline-dark:focus {

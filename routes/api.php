@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\API\Auth\AuthController;
 use App\Http\Controllers\API\Owner\MobilController;
+use App\Http\Controllers\API\Owner\ReviewController;
+use App\Http\Controllers\API\Owner\ReviewMobilController;
+use App\Models\ReviewMobil;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,5 +26,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login',[AuthController::class, 'login']);
 
-Route::get('mobil',[MobilController::class, 'index']);
-Route::post('mobil/add',[MobilController::class, 'add']);
+Route::prefix('/mobil')->group(function(){
+    Route::get('/view',[MobilController::class, 'MobilView']);
+    Route::post('/add',[MobilController::class, 'MobilAdd']);
+    // Route::post('/add/{id}',[MobilController::class, 'MobilAdd'])->middleware('auth:sanctum');
+    Route::put('/update',[MobilController::class, 'MobilUpdate']);
+});
+
+// route review
+Route::get('review',[ReviewController::class, 'index']);
+Route::post('review/add',[ReviewController::class, 'add']);
+
+
+
+

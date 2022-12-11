@@ -2878,7 +2878,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-dark {
   color: #5a5c69;
-  border-color: #5a5c69;
+  border-color: var(--dark);
 }
 
 .btn-outline-dark:hover {
