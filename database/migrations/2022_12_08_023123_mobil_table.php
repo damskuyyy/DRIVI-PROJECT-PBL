@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('mobils', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_detail_owner');
+            $table->bigInteger('id_user');
             $table->string('nama_mobil');
             $table->string('jenis_mobil');
             $table->integer('harga');
@@ -23,6 +23,7 @@ return new class extends Migration
             $table->integer('jumlah_kursi');
             $table->string('bahan_bakar');
             $table->string('jenis_transmisi');
+            $table->string('profile_photo_path', 2048)->nullable();
             $table->timestamps();
         });
     }
