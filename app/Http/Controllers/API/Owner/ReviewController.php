@@ -19,18 +19,18 @@ class ReviewController extends Controller
         $validateData = $request->validate([
             'id_detail_user' => 'required',
             'id_mobil' => 'required',
-            // 'tanggal_review' => 'required',
             'bintang' => 'required',
             'komentar' => 'required',
+            // 'tanggal_review' => 'required',
         ]);
 
         // create user
         $review = new Review([
             'id_detail_user' => $request->id_detail_user,
             'id_mobil' => $request->id_mobil,
-            // 'tanggal_review' => $request->tanggal_review,
             'bintang' => $request->bintang,
             'komentar' => $request->komentar,
+            // 'tanggal_review' => $request->tanggal_review,
         ]);
 
         $review->save();

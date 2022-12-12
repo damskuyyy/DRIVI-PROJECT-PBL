@@ -19,7 +19,7 @@
 </li>
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
-    <a class="nav-link" href="{{url('/dashboard')}}">
+    <a class="nav-link" href="{{ ('component.review_mobil')}}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Review Mobil</span></a>
 </li>
