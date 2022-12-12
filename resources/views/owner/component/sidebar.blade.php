@@ -13,16 +13,11 @@
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
-    <a class="nav-link" href="{{url('/dashboard')}}">
+    <a class="nav-link" href="{{url('/owner/dashboard')}}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
 </li>
 <!-- Nav Item - Dashboard -->
-<li class="nav-item active">
-    <a class="nav-link" href="{{ ('component.review_mobil')}}">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Review Mobil</span></a>
-</li>
 <!-- Nav Item - Homepage Sewa -->
 {{-- <li class="nav-item active">
     <a class="nav-link" href="{{url('/dashboard')}}">
@@ -42,14 +37,15 @@
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
         aria-expanded="true" aria-controls="collapseTwo">
-        <i class="fas fa-fw fa-cog"></i>
-        <span>Components</span>
+        <i class="bi bi-car-front-fill"></i>
+        <span>Mobil</span>
     </a>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
+            <h6 class="collapse-header">Mobil:</h6>
+            <a class="collapse-item" href="{{ url ('owner/add')}}">Add Mobil</a>
+            <a class="collapse-item" href="{{ url ('owner/list')}}">List</a>
+            <a class="collapse-item" href="{{ url ('owner/review')}}">Review</a>
         </div>
     </div>
 </li>
