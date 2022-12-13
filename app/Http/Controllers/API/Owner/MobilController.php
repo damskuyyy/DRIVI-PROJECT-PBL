@@ -22,7 +22,7 @@ class MobilController extends Controller
     {
         $validateData = $request->validate([
             
-            'id_user' => 'required',
+            'user_id' => 'required',
             'nama_mobil' => 'required',
             'jenis_mobil' => 'required',
             'harga' => 'required',
@@ -33,7 +33,8 @@ class MobilController extends Controller
         ]);
 
         $mobil = new Mobil([
-            'id_user' =>  $request->id_user,
+            // 'id_user' = Auth::user()->id;
+            'user_id' =>  $request->user_id,
             'nama_mobil' =>  $request->nama_mobil,
             'jenis_mobil' =>  $request->jenis_mobil,
             'harga' =>  $request->harga,
@@ -52,7 +53,7 @@ class MobilController extends Controller
     public function MobilUpdate(Request $request, $id)
     {
         $mobil = mobil::find($id);
-        $mobil-> id_user = $request->input('id_user');
+        $mobil-> user_id = $request->input('user_id');
         $mobil-> nama_mobil = $request->input('nama_mobil');
         $mobil-> jenis_mobil = $request->input('jenis_mobil');
         $mobil-> harga = $request->input('harga');
