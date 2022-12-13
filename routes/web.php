@@ -3,6 +3,11 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Owner\ReviewController;
+use App\Http\Controllers\Owner\AddController;
+use App\Http\Controllers\Owner\EditController;
+use App\Http\Controllers\Owner\ListController;
+use App\Http\Controllers\Owner\OwnerController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth as Auth;
 
@@ -39,13 +44,26 @@ Route::get('/admin/dashboard',function(){
     return view('admin.admin_master');
 })->name('admin.dashboard');
 
-Route::get('/owner/dashboard',function(){
-    return view('owner.owner_master');
-})->name('owner.dashboard');
+Route::prefix('owner')->group(function () {
+    Route::get('/dashboard', [OwnerController::class, 'index'])->name('owner.dashboard');
+    Route::get('/add', [AddController::class, 'add'])->name('owner.add');
+    Route::get('/list', [ListController::class, 'list'])->name('owner.list');
+    Route::get('/review', [ReviewController::class, 'review'])->name('owner.review_mobil');
+    Route::get('/edit', [EditController::class, 'edit'])->name('owner.edit_mobil');
+    Route::post('/store', [addController::class, 'mobilStore'])->name('owner.mobilStore');
+
+});
+    
 
 Route::get('/user/home',function(){
     return view('user.homepage');
 })->name('user.home');
+
+Route::prefix('user')->group(function () {
+    Route::get('/home', function(){ return view('user.homepage');})->name('user.home');
+    Route::get('/detail', [AdminController::class, 'detail'])->name('owner.list');
+    Route::get('/contact', [AdminController::class, 'contact'])->name('user.contact');
+});
 
 Route::get('/home',function(){
     return view('user.index');

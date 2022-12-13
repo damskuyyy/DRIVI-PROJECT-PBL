@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    
     <title>Draivi - Dashboard</title>
-
+    
+    <link rel="icon" type="image/x-icon" href="{{ asset ('frontend/assets/favicon.ico')}}" />
     <!-- Custom fonts for this template-->
     <link href="{{asset('backend/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link
@@ -20,11 +21,37 @@
     <!-- Custom styles for this template-->
     <link href="{{asset('backend/css/sb-admin-2.min.css')}}" rel="stylesheet">
 
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    {{-- bootstrap --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 
 <body id="page-top">
+    @csrf
+<!-- Page Wrapper -->
+        <div id="wrapper">
+                <!-- Content Wrapper -->
+
+
+    <!-- Sidebar -->
+    @include('owner.component.sidebar')
+    <!-- End of Sidebar -->
 
     @yield('content')
+
+    <!-- Footer -->
+@include('owner.component.footer')
+<!-- End of Footer -->
+
+</div>
+<!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+
 
      <!-- Scroll to Top Button-->
      <a class="scroll-to-top rounded" href="#page-top">
@@ -67,6 +94,13 @@
     <!-- Page level custom scripts -->
     <script src="{{asset('backend/js/demo/chart-area-demo.js')}}"></script>
     <script src="{{asset('backend/js/demo/chart-pie-demo.js')}}"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
 
 </body>
 
