@@ -23,7 +23,7 @@ return new class extends Migration
             $table->integer('jumlah_kursi');
             $table->string('bahan_bakar');
             $table->string('jenis_transmisi');
-            $table->string('profile_photo_path', 2048)->nullable();
+            $table->string('mobil_photo_path', 2048)->nullable();
             $table->timestamps();
         });
     }

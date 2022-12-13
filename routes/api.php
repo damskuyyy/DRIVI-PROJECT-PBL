@@ -31,7 +31,8 @@ Route::prefix('/mobil')->group(function(){
     Route::get('/view',[MobilController::class, 'MobilView']);
     Route::post('/add',[MobilController::class, 'MobilAdd']);
     // Route::post('/add/{id}',[MobilController::class, 'MobilAdd'])->middleware('auth:sanctum');
-    Route::put('/update',[MobilController::class, 'MobilUpdate']);
+    Route::put('/update/{id}',[MobilController::class, 'MobilUpdate']);
+    Route::delete('/delete/{id}',[MobilController::class, 'MobilDelete']);
 });
 
 // route review
