@@ -46,8 +46,9 @@ class MobilController extends Controller
     }
 
     // update
-    public function MobilUpdate(Request $request)
+    public function MobilUpdate(Request $request,$id)
     {
+        $mobil=Mobil::find($id);
         $validateData = $request->validate([
             
             'id_user' => 'required',

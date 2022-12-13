@@ -3,8 +3,9 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\API\Owner\ReviewController;
+use App\Http\Controllers\Owner\ReviewController;
 use App\Http\Controllers\Owner\AddController;
+use App\Http\Controllers\Owner\EditController;
 use App\Http\Controllers\Owner\ListController;
 use App\Http\Controllers\Owner\OwnerController;
 use App\Http\Controllers\UserController;
@@ -47,7 +48,8 @@ Route::prefix('owner')->group(function () {
     Route::get('/dashboard', [OwnerController::class, 'index'])->name('owner.dashboard');
     Route::get('/add', [AddController::class, 'add'])->name('owner.add');
     Route::get('/list', [ListController::class, 'list'])->name('owner.list');
-    Route::get('/review', [ReviewController::class, 'review'])->name('owner.review');
+    Route::get('/review', [ReviewController::class, 'review'])->name('owner.review_mobil');
+    Route::get('/edit', [EditController::class, 'edit'])->name('owner.edit_mobil');
 });
     
 

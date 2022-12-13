@@ -14,16 +14,21 @@
             <div class="container-fluid">
 
                 <div class="box-header with-border">
-                    <h4 class="box-title">Tambah Mobil</h4>
+                    <h4 class="box-title">Edit Mobil</h4>
                   </div>
 
                 <form class="row g-3">
-                  @csrf
                     <div class="col-md-6">
+                      <fieldset disabled>
+                        <label for="mobil" class="form-label">Id Mobil</label>
+                        <input type="text" class="form-control" id="mobil" name="mobil" required data-validation-required-message="This field is required" placeholder="id">
+                      </fieldset>                    
+                    </div>
+                    <div class="col-md-6 ">
                       <label for="mobil" class="form-label">Nama Mobil</label>
                       <input type="text" class="form-control" id="mobil" name="mobil" required data-validation-required-message="This field is required" >
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 pt-4">
                       <label for="jenis" class="form-label">Jenis Mobil</label>
                       <input type="text" class="form-control" id="jenis" name="jenis" required data-validation-required-message="This field is required">
                     </div>
@@ -61,9 +66,19 @@
                             </select>
                           </div>
                     </div>
-                    <div class="col-md-12 pt-4">
+                    <div class="col-md-6 pt-4">
                       <label for="deskripsi" class="form-label">Deskripsi Mobil</label>
                       <textarea type="text" class="form-control" id="deskripsi" name="deskripsi" required data-validation-required-message="This field is required">Tulis Deskripsi Mobil</textarea>
+                    </div>
+
+                    <div class="input-group mb-3 pt-4 col-md-6">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile02">
+                        <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                      </div>
                     </div>
                     
                     <div class="col-12 pt-4">

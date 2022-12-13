@@ -25,6 +25,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
+                            <th>No</th>
                             <th>ID Detail User</th>
                             <th>ID Mobil</th>
                             <th>Bintang</th>
@@ -32,15 +33,14 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                        <th>ID Detail User</th>
-                            <th>ID Mobil</th>
-                            <th>Bintang</th>
-                            <th>Komentar</th>
-                            <th>Action</th>
-                        </tr>
-                    </tfoot>
+                    <tr>
+                       <td>1</td>
+                       <td>lorem</td>
+                       <td>lorem</td>
+                       <td>lorem</td>
+                       <td>lorem</td>
+                       <td>lorem</td>
+                    </tr>
                     <tbody>
                     </tbody>
                 </table>
