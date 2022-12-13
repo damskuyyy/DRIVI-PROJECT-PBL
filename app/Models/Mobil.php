@@ -12,4 +12,9 @@ class Mobil extends Model
     protected $fillable = [
         'id_user','nama_mobil', 'jenis_mobil', 'harga', 'deskripsi', 'jumlah_kursi', 'bahan_bakar', 'jenis_transmisi' 
     ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\Users');
+    }
 }

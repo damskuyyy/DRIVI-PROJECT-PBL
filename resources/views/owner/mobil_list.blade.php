@@ -61,7 +61,7 @@
                         </tr>
                     </tfoot> --}}
                     <tbody>
-                        @foreach($allDataMobil as $key => $mobil)
+                        @foreach($user->mobils as $key=> $mobil)
 							<tr>
 								<td>{{$key+1}}</td>
 								<td>{{$mobil->nama_mobil}}</td>
