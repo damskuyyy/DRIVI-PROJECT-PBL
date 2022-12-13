@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('id_detail_user');
             $table->bigInteger('id_mobil');
-            // $table->timestamps('tanggal_review', $precision = 0);
             $table->integer('bintang');
             $table->text('komentar');
             $table->timestamps();
+             // $table->timestamps('tanggal_review', $precision = 0);
         });
     }
 

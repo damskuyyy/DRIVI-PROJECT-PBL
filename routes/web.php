@@ -63,8 +63,8 @@ Route::get('user/logout', [HomeController::class, 'logout'])->name('logout');
 
 // Route CRUD Review Mobil
 Route::prefix('review')->group(function () {
-    Route::get('/view', [BarangController::class, 'BarangView'])->name('barang.view');
-    Route::get('/add', [BarangController::class, 'BarangAdd'])->name('barang.add');
+    Route::get('/view', [ReviewController::class, 'ReviewView'])->name('review.view');
+    Route::get('/add', [ReviewController::class, 'ReviewAdd'])->name('review.add');
     // Route::post('/store', [BarangController::class, 'BarangRequest'])->name('barang.request');
     // Route::get('/edit/{id}', [BarangController::class, 'BarangEdit'])->name('barang.edit');
     // Route::post('/update/{id}', [BarangController::class, 'BarangUpdate'])->name('barang.update');
