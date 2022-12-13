@@ -13,7 +13,7 @@ class AddController extends Controller
         return view('owner.add_mobil');
     }
 
-    public function mobilStore(Request $request){
+    public function mobilStore(Request $request, $id_user){
         $validateData = $request->validate([
             
             'id_user' => 'required',
@@ -27,7 +27,7 @@ class AddController extends Controller
         ]);
 
         $mobil = new Mobil([
-            'id_user' =>  Auth::user()->id,
+            Auth::user()->id,
             'nama_mobil' =>  $request->nama_mobil,
             'jenis_mobil' =>  $request->jenis_mobil,
             'harga' =>  $request->harga,
