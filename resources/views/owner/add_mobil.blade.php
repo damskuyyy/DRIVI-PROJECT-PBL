@@ -17,7 +17,7 @@
                     <h4 class="box-title">Tambah Mobil</h4>
                   </div>
 
-                <form class="row g-3">
+                <form class="row g-3" method="POST" action="{{route('owner.mobilStore')}}">
                   @csrf
                     <div class="col-md-6">
                       <label for="mobil" class="form-label">Nama Mobil</label>

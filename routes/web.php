@@ -50,6 +50,8 @@ Route::prefix('owner')->group(function () {
     Route::get('/list', [ListController::class, 'list'])->name('owner.list');
     Route::get('/review', [ReviewController::class, 'review'])->name('owner.review_mobil');
     Route::get('/edit', [EditController::class, 'edit'])->name('owner.edit_mobil');
+    Route::post('/store', [addController::class, 'mobilStore'])->name('owner.mobilStore');
+
 });
     
 
