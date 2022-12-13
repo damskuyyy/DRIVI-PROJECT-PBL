@@ -24,8 +24,8 @@ return new class extends Migration
             $table->string('jenis_transmisi');
             $table->string('mobil_photo_path', 2048)->nullable();
             $table->timestamps();
-            $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
