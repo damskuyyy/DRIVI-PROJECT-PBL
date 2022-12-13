@@ -39,8 +39,9 @@ Route::get('review',[ReviewController::class, 'index']);
 Route::post('review/add',[ReviewController::class, 'add']);
 
 
-
-
-
-Route::get('sewa',[TransactionController::class, 'index']);
-Route::post('sewa/add',[TransactionController::class, 'add']);
+Route::prefix('/sewa')->group(function(){
+    Route::get('/view',[TransactionController::class, 'TransactionView']);
+    Route::post('/add',[TransactionController::class, 'TransactionAdd']);
+    Route::put('/update',[TransactionController::class, 'TransactionUpdate']);
+    Route::get('/delete/{$id}',[TransactionController::class, 'TransactionDelete']);
+});
