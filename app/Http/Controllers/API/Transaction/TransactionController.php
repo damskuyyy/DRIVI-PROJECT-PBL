@@ -53,33 +53,38 @@ class TransactionController extends Controller
    
     public function TransactionUpdate(Request $request, $id)
     {   
+        // $validateData = $request->validate([
+        //     'id_user' => 'required',
+        //     'id_mobil'=> 'required',
+        //     'tanggal_transaksi' => 'required',
+        //     'status_transaksi' => 'required',
+        //     'tanggal_sewa' => 'required',
+        //     'tanggal_pengembalian' => 'required',
+        //     'metode_pembayaran' => 'required',
+        //     'status_pengembalian' => 'required',
+        //     'denda' => 'required',
+        // ]);
+
+
         $transaction = Transaction::find($id);
-        $validateData = $request->validate([
-            'id_user' => 'required',
-            'id_mobil'=> 'required',
-            'tanggal_transaksi' => 'required',
-            'status_transaksi' => 'required',
-            'tanggal_sewa' => 'required',
-            'tanggal_pengembalian' => 'required',
-            'metode_pembayaran' => 'required',
-            'status_pengembalian' => 'required',
-            'denda' => 'required',
-        ]);
+        $transaction -> id_user = $request->input('id_user');
+        $transaction -> id_mobil = $request->input('id_mobil');
+        $transaction -> tanggal_transaksi = $request->input('tanggal_transaksi');
+        $transaction -> status_transaksi = $request->input('status_transaksi');
+        $transaction -> tanggal_sewa = $request->input('tanggal_sewa');
+        $transaction -> tanggal_pengembalian = $request->input('tanggal_pengembalian');
+        $transaction -> metode_pembayaran = $request->input('metode_pembayaran');
+        $transaction -> status_pengembalian = $request->input('status_pengembalian');
+        $transaction -> denda = $request->input ('denda');
+        
+        $transaction -> save();        
 
-        $transaction = new Transaction([
-            'id_user' => $request->id_user,
-            'id_mobil' => $request->id_mobil,
-            'tanggal_transaksi' => $request->tanggal_transaksi,
-            'status_transaksi' => $request->status_transaksi,
-            'tanggal_sewa' => $request->tanggal_sewa,
-            'tanggal_pengembalian' => $request->tanggal_pengembalian,
-            'metode_pembayaran' => $request->metode_pembayaran,
-            'status_pengembalian' => $request->status_pengembalian,
-            'denda' => $request->denda,
-        ]);
+        return response()->json($transaction, 201);
+    }
 
-        $transaction->save();
-
+    public function TransactionDelete(Request $request, $id){
+        $transaction = Transaction::find($id);
+        $transaction->delete();
         return response()->json($transaction, 201);
     }
 }
