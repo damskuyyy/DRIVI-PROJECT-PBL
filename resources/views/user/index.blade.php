@@ -23,6 +23,14 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{{asset('frontend/css/styles.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}" />
+
+    {{-- bootstrap --}}
+    <link href="{{asset('backend/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="{{asset('backend/css/sb-admin-2.min.css')}}" rel="stylesheet">
+
   </head>
   <body>
     <!-- Navigation-->
@@ -45,9 +53,9 @@
             <li class="nav-item">
               <a class="nav-link active" href="./index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contact.html">Contact</a>
-            </li>
+          </li class="nav-item" class="nav-link">
+          <a href="{{ url('/login')}}"><button type="button" class="btn btn-outline-dark" >LOGIN DISINI</button></a>
+          </li>
           </ul>
         </div>
       </div>
@@ -59,7 +67,8 @@
           <h1 class="display-4 fw-bolder">Sewa Mobil</h1>
           <p class="lead fw-normal text-white-50 mb-0">
             hanya dengan satu sentuhan
-          </p>
+          </p><hr>
+          <a href="{{ url('/register')}}"><button type="button" class="btn btn-light" >Daftar Sekarang</button></a>
         </div>
       </div>
     </header>
