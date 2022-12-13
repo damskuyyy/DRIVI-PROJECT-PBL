@@ -3,7 +3,10 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\OwnerController;
+use App\Http\Controllers\API\Owner\ReviewController;
+use App\Http\Controllers\Owner\AddController;
+use App\Http\Controllers\Owner\ListController;
+use App\Http\Controllers\Owner\OwnerController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth as Auth;
 
@@ -42,9 +45,9 @@ Route::get('/admin/dashboard',function(){
 
 Route::prefix('owner')->group(function () {
     Route::get('/dashboard', [OwnerController::class, 'index'])->name('owner.dashboard');
-    Route::get('/add', [OwnerController::class, 'add'])->name('owner.add');
-    Route::get('/list', [OwnerController::class, 'list'])->name('owner.list');
-    Route::get('/review', [OwnerController::class, 'review'])->name('owner.review');
+    Route::get('/add', [AddController::class, 'add'])->name('owner.add');
+    Route::get('/list', [ListController::class, 'list'])->name('owner.list');
+    Route::get('/review', [ReviewController::class, 'review'])->name('owner.review');
 });
     
 
