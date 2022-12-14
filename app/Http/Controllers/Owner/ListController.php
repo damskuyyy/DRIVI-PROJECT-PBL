@@ -40,4 +40,6 @@ class ListController extends Controller
     
             return redirect()->route('user.view')->with('fire','Tambah user berhasil');
         }
+
+        
 }

@@ -10,13 +10,15 @@ use Illuminate\Support\Facades\Auth;
 class AddController extends Controller
 {
     public function add(){
-        return view('owner.add_mobil');
+        $user_id = Auth::user();
+        return view('owner.add_mobil', compact('user_id'));
     }
 
-    public function mobilStore(Request $request, $id_user){
+    public function mobilStore(Request $request){
+        $user_id = Auth::user();
         $validateData = $request->validate([
             
-            'id_user' => 'required',
+            // 'user_id' => 'required',
             'nama_mobil' => 'required',
             'jenis_mobil' => 'required',
             'harga' => 'required',
@@ -26,21 +28,21 @@ class AddController extends Controller
             'jenis_transmisi' => 'required',
         ]);
 
-        $mobil = new Mobil([
-            Auth::user()->id,
-            'nama_mobil' =>  $request->nama_mobil,
-            'jenis_mobil' =>  $request->jenis_mobil,
-            'harga' =>  $request->harga,
-            'deskripsi' =>  $request->deskripsi,
-            'jumlah_kursi' =>  $request->jumlah_kursi,
-            'bahan_bakar' =>  $request->bahan_bakar,
-            'jenis_transmisi' =>  $request->jenis_transmisi,
-           
-        ]);
-       
+
+        $mobil= new Mobil();
+        $mobil->user_id=$user_id->id;
+        $mobil->nama_mobil=$request->nama_mobil;
+        $mobil->jenis_mobil=$request->jenis_mobil;
+        $mobil->harga=$request->harga;
+        $mobil->deskripsi=$request->deskripsi;
+        $mobil->jumlah_kursi=$request->jumlah_kursi;
+        $mobil->bahan_bakar=$request->bahan_bakar;
+        $mobil->jenis_transmisi=$request->jenis_transmisi;
+        
         $mobil->save();
 
-        dd($mobil);
-        return redirect()->route('owner.list')->with('info','Tambah user berhasil');
+
+        return redirect()->route('owner.list');
+    
     }
 }

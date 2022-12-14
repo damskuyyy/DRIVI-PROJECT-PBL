@@ -19,13 +19,17 @@
 
                 <form class="row g-3" method="POST" action="{{route('owner.mobilStore')}}">
                   @csrf
+                    {{-- <div class="col-md-6">
+                      <label for="user_id" class="form-label">User Id</label>
+                      <input type="text" class="form-control disabled" id="user_id" name="user_id" value="{{$user_id->id}}" readonly>
+                    </div> --}}
                     <div class="col-md-6">
-                      <label for="mobil" class="form-label">Nama Mobil</label>
-                      <input type="text" class="form-control" id="mobil" name="mobil" required data-validation-required-message="This field is required" >
+                      <label for="nama_mobil" class="form-label">Nama Mobil</label>
+                      <input type="text" class="form-control" id="nama_mobil" name="nama_mobil" required data-validation-required-message="This field is required" >
                     </div>
-                    <div class="col-md-6">
-                      <label for="jenis" class="form-label">Jenis Mobil</label>
-                      <input type="text" class="form-control" id="jenis" name="jenis" required data-validation-required-message="This field is required">
+                    <div class="col-md-6 pt-4">
+                      <label for="jenis_mobil" class="form-label">Jenis Mobil</label>
+                      <input type="text" class="form-control" id="jenis_mobil" name="jenis_mobil" required data-validation-required-message="This field is required">
                     </div>
                     <div class="col-md-6 pt-4">
                         <label for="harga" class="form-label" >Harga</label>
@@ -35,15 +39,15 @@
                         </div>
                     </div>
                     <div class="col-md-6 pt-4">
-                      <label for="kursi" class="form-label">Jumlah Kursi</label>
-                      <input type="text" class="form-control" id="kursi" name="kursi" required data-validation-required-message="This field is required">
+                      <label for="jumlah_kursi" class="form-label">Jumlah Kursi</label>
+                      <input type="text" class="form-control" id="jumlah_kursi" name="jumlah_kursi" required data-validation-required-message="This field is required">
                     </div>
                     <div class="col-md-6 pt-4">
                       {{-- <label for="bahanBakar" class="form-label">Bahan Bakar</label> --}}
                       {{-- <input type="text" class="form-control" id="bahanBakar" name="bahanBakar" required data-validation-required-message="This field is required"> --}}
                       <div class="form-group">
-                        <label for="bahanBakar">Bahan Bakar</label>
-                        <select class="form-control" id="bahanBakar">
+                        <label for="bahan_bakar">Bahan Bakar</label>
+                        <select class="form-control" id="bahan_bakar" name="bahan_bakar">
                             <option selected>Pilih Bahan Bakar</option>
                             <option value="Bensin">Bensin</option>
                             <option value="Solar">Solar</option>
@@ -52,8 +56,8 @@
                     </div>
                     <div class="col-md-6 pt-4">
                         <div class="form-group">
-                            <label for="bahanBakar">Jenis Transmisi</label>
-                            <select class="form-control" id="bahanBakar">
+                            <label for="jenis_transmisi">Jenis Transmisi</label>
+                            <select class="form-control" id="jenis_transmisi" name="jenis_transmisi">
                                 <option selected>Pilih Jenis Transmisi</option>
                                 <option value="Matic">Matic</option>
                                 <option value="Manual">Manual</option>
@@ -63,7 +67,7 @@
                     </div>
                     <div class="col-md-12 pt-4">
                       <label for="deskripsi" class="form-label">Deskripsi Mobil</label>
-                      <textarea type="text" class="form-control" id="deskripsi" name="deskripsi" required data-validation-required-message="This field is required">Tulis Deskripsi Mobil</textarea>
+                      <textarea type="text" class="form-control" id="deskripsi" name="deskripsi" required data-validation-required-message="This field is required" placeholder="Tulis Deskripsi Mobil"></textarea>
                     </div>
                     
                     <div class="col-12 pt-4">
