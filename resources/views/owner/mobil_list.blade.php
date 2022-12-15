@@ -41,6 +41,7 @@
                             @endforeach --}}
                         <tr>
                             <th>No</th>
+                            <th>Images</th>
                             <th>Nama Mobil</th>
                             <th>Jenis</th>
                             <th>Harga</th>
@@ -64,6 +65,7 @@
                         @foreach($user->mobils as $key=> $mobil)
 							<tr>
 								<td>{{$key+1}}</td>
+								<td><img src="{{ asset ('storage/mobil/'.$mobil->mobil_photo_path)}}" alt="" width="100px"></td>
 								<td>{{$mobil->nama_mobil}}</td>
 								<td>{{$mobil->jenis_mobil}}</td>
 								<td>{{$mobil->harga}}</td>
@@ -72,7 +74,8 @@
 								<td>{{$mobil->jenis_transmisi}}</td>
 								
 								<td>
-                                    <a href="{{ url ('owner/edit', '$mobil->id')}}" class="btn btn-dark">Edit</a>
+                                    <a href="#" class="btn btn-dark">Edit</a>
+                                    {{-- <a href="#" class="btn btn-success">Detail</a> --}}
                                     <a href="{{route('owner.mobil_delete', $mobil->id)}}"  class="btn btn-outline-danger" >Hapus</a>
                                 </td>
 							</tr>

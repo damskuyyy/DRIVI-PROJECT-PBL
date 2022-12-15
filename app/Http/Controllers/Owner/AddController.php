@@ -16,6 +16,13 @@ class AddController extends Controller
 
     public function mobilStore(Request $request){
         $user_id = Auth::user();
+        // nama fiel sesuai yang di setup
+        $extension = $request->file('photo')->getClientOriginalExtension(); //mengambil extensi asli file
+        $newName = $request->nama_mobil.'-'.now()->timestamp.'.'.$extension;  //rename file
+        $request->file('photo')->storeAs('mobil', $newName); //path file
+
+        // nama file random
+        // return $path = $request->file('photo')->store('mobil'); //nama file random
         $validateData = $request->validate([
             
             // 'user_id' => 'required',
@@ -26,6 +33,7 @@ class AddController extends Controller
             'jumlah_kursi' => 'required',
             'bahan_bakar' => 'required',
             'jenis_transmisi' => 'required',
+            'photo' => 'required',
         ]);
 
 
@@ -38,6 +46,7 @@ class AddController extends Controller
         $mobil->jumlah_kursi=$request->jumlah_kursi;
         $mobil->bahan_bakar=$request->bahan_bakar;
         $mobil->jenis_transmisi=$request->jenis_transmisi;
+        $mobil->mobil_photo_path=$newName;
         
         $mobil->save();
 

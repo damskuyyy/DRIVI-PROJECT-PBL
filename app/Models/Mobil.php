@@ -10,7 +10,7 @@ class Mobil extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id','nama_mobil', 'jenis_mobil', 'harga', 'deskripsi', 'jumlah_kursi', 'bahan_bakar', 'jenis_transmisi' 
+        'user_id','nama_mobil', 'jenis_mobil', 'harga', 'deskripsi', 'jumlah_kursi', 'bahan_bakar', 'jenis_transmisi', 'mobil_photo_path' 
     ];
 
     public function user()
