@@ -86,3 +86,11 @@ Route::prefix('review')->group(function () {
     // Route::post('/update/{id}', [BarangController::class, 'BarangUpdate'])->name('barang.update');
     
 });
+
+Route::prefix('transaksi')->group(function () {
+    Route::get('/penyewaan', [TransactionController::class, 'listPenyewaan'])->name('transaksi.penyewaan');
+    // Route::get('/pending', [TransactionController::class, 'add'])->name('transaction.pending');
+    // Route::get('/list', [ListController::class, 'list'])->name('owner.list');
+    // Route::get('/review', [ReviewController::class, 'review'])->name('owner.review_mobil');
+    // Route::get('/edit', [EditController::class, 'edit'])->name('owner.edit_mobil');
+});
