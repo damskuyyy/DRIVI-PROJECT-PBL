@@ -53,18 +53,6 @@ class TransactionController extends Controller
    
     public function TransactionUpdate(Request $request, $id)
     {   
-        // $validateData = $request->validate([
-        //     'id_user' => 'required',
-        //     'id_mobil'=> 'required',
-        //     'tanggal_transaksi' => 'required',
-        //     'status_transaksi' => 'required',
-        //     'tanggal_sewa' => 'required',
-        //     'tanggal_pengembalian' => 'required',
-        //     'metode_pembayaran' => 'required',
-        //     'status_pengembalian' => 'required',
-        //     'denda' => 'required',
-        // ]);
-
 
         $transaction = Transaction::find($id);
         $transaction -> id_user = $request->input('id_user');
