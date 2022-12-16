@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Owner\ReviewController;
 use App\Http\Controllers\Owner\AddController;
+use App\Http\Controllers\Owner\DeleteController;
 use App\Http\Controllers\Owner\EditController;
 use App\Http\Controllers\Owner\ListController;
 use App\Http\Controllers\Owner\OwnerController;
@@ -46,11 +47,12 @@ Route::get('/admin/dashboard',function(){
 
 Route::prefix('owner')->group(function () {
     Route::get('/dashboard', [OwnerController::class, 'index'])->name('owner.dashboard');
+    Route::get('/delete/{id}', [DeleteController::class, 'mobilDelete'])->name('owner.mobil_delete');
     Route::get('/add', [AddController::class, 'add'])->name('owner.add');
     Route::get('/list', [ListController::class, 'list'])->name('owner.list');
     Route::get('/review', [ReviewController::class, 'review'])->name('owner.review_mobil');
     Route::get('/edit', [EditController::class, 'edit'])->name('owner.edit_mobil');
-    Route::post('/store', [addController::class, 'mobilStore'])->name('owner.mobilStore');
+    Route::post('/store', [AddController::class, 'mobilStore'])->name('owner.mobilStore');
 
 });
     
@@ -61,7 +63,7 @@ Route::get('/user/home',function(){
 
 Route::prefix('user')->group(function () {
     Route::get('/home', function(){ return view('user.homepage');})->name('user.home');
-    Route::get('/detail', [AdminController::class, 'detail'])->name('owner.list');
+    Route::get('/detail', [AdminController::class, 'detail'])->name('user.list');
     Route::get('/contact', [AdminController::class, 'contact'])->name('user.contact');
 });
 
