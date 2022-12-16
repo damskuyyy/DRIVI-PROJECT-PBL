@@ -60,4 +60,9 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function mobils()
+    {
+        return $this->hasMany('App\Models\Mobil');
+    }
 }
