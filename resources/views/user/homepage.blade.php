@@ -4,7 +4,7 @@
        <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="#">Start Menyewa</a>
+        <a class="navbar-brand" href="#">Selamat dan Mulai Menyewa</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -24,6 +24,11 @@
             <li class="nav-item">
               <a class="nav-link" href="{{url('user/contact')}}">Contact</a>
             </li>
+            <a
+                    class="btn btn-dark mt-auto text-white"
+                    href="{{route('user.review_mobil')}}"
+                    >Review Mobil</a>
+                </div>
             {{-- </li class="nav-item" class="nav-link">
             <a href="{{ url('/login')}}"><button type="button" class="btn btn-outline-dark" >LOGIN DISINI</button></a>
             </li> --}}
@@ -64,8 +69,8 @@
       <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
           <h1 class="display-4 fw-bolder">Sewa Mobil</h1>
-          <p class="lead fw-normal text-white-50 mb-0">
-            hanya dengan satu sentuhan
+          <p>
+           Draivi Menyediakan Untuk Anda Jasa Sewa Mobil Terpercaya
           </p>
         </div>
       </div>
@@ -74,24 +79,27 @@
     <section class="py-5">
       <div class="container px-4 px-lg-5 mt-5">
         <h3 class="text-center mb-5">Daftar Mobil</h3>
-        <div
-          class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
-        >
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
           <div class="col mb-5">
             <div class="card h-100">
               <!-- Sale badge-->
-              <div
-                class="badge badge-custom bg-warning text-white position-absolute"
-                style="top: 0; right: 0"
-              >
+              <div class="badge badge-custom bg-warning text-white position-absolute" style="top: 0; right: 0">
                 Tidak Tersedia
               </div>
               <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
-                alt="..."
-              />
+             {{-- @if ($data->mobil_photo_path != '')
+             <img
+             class="card-img-top"
+             src="{{ asset ('storage/mobil/'.$mobil->mobil_photo_path)}}"
+             alt="..."
+           />   
+           
+             @else
+             
+           />    
+             @endif --}}
+             <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
               <!-- Product details-->
               <div class="card-body card-body-custom pt-4">
                 <div class="text-center">
@@ -99,7 +107,7 @@
                   <h5 class="fw-bolder">Special Item</h5>
                   <!-- Product price-->
                   <div class="rent-price mb-3">
-                    <span class="text-primary">Rp.200.000/</span>day
+                    <span class="text-primary">Rp./</span>day
                   </div>
                   <ul class="list-unstyled list-style-group">
                     <li
@@ -130,8 +138,7 @@
                   <a
                     class="btn btn-info mt-auto text-white"
                     href="{{route('user.detail')}}"
-                    >Detail</a
-                  >
+                    >Detail</a>
                 </div>
               </div>
             </div>
