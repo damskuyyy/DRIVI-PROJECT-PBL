@@ -79,24 +79,27 @@
     <section class="py-5">
       <div class="container px-4 px-lg-5 mt-5">
         <h3 class="text-center mb-5">Daftar Mobil</h3>
-        <div
-          class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
-        >
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
           <div class="col mb-5">
             <div class="card h-100">
               <!-- Sale badge-->
-              <div
-                class="badge badge-custom bg-warning text-white position-absolute"
-                style="top: 0; right: 0"
-              >
+              <div class="badge badge-custom bg-warning text-white position-absolute" style="top: 0; right: 0">
                 Tidak Tersedia
               </div>
               <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
-                alt="..."
-              />
+             {{-- @if ($data->mobil_photo_path != '')
+             <img
+             class="card-img-top"
+             src="{{ asset ('storage/mobil/'.$mobil->mobil_photo_path)}}"
+             alt="..."
+           />   
+           
+             @else
+             
+           />    
+             @endif --}}
+             <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
               <!-- Product details-->
               <div class="card-body card-body-custom pt-4">
                 <div class="text-center">
@@ -104,7 +107,7 @@
                   <h5 class="fw-bolder">Special Item</h5>
                   <!-- Product price-->
                   <div class="rent-price mb-3">
-                    <span class="text-primary">Rp.200.000/</span>day
+                    <span class="text-primary">Rp./</span>day
                   </div>
                   <ul class="list-unstyled list-style-group">
                     <li
