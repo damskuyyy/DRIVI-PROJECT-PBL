@@ -8,7 +8,9 @@ use App\Http\Controllers\Owner\AddController;
 use App\Http\Controllers\Owner\EditController;
 use App\Http\Controllers\Owner\ListController;
 use App\Http\Controllers\Owner\OwnerController;
+use App\Http\Controllers\Owner\TransactionController;
 use App\Http\Controllers\UserController;
+
 use Illuminate\Support\Facades\Auth as Auth;
 
 use function PHPSTORM_META\type;
@@ -88,9 +90,6 @@ Route::prefix('review')->group(function () {
 });
 
 Route::prefix('transaksi')->group(function () {
-    Route::get('/penyewaan', [TransactionController::class, 'listPenyewaan'])->name('transaksi.penyewaan');
+    Route::get('/list', [TransactionController::class, 'listTransaksi'])->name('transaksi.list');
     // Route::get('/pending', [TransactionController::class, 'add'])->name('transaction.pending');
-    // Route::get('/list', [ListController::class, 'list'])->name('owner.list');
-    // Route::get('/review', [ReviewController::class, 'review'])->name('owner.review_mobil');
-    // Route::get('/edit', [EditController::class, 'edit'])->name('owner.edit_mobil');
 });
