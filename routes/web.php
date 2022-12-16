@@ -10,6 +10,7 @@ use App\Http\Controllers\Owner\EditController;
 use App\Http\Controllers\Owner\ListController;
 use App\Http\Controllers\Owner\OwnerController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\User\UserReviewController;
 use Illuminate\Support\Facades\Auth as Auth;
 
 use function PHPSTORM_META\type;
@@ -65,6 +66,8 @@ Route::prefix('user')->group(function () {
     Route::get('/home', function(){ return view('user.homepage');})->name('user.home');
     Route::get('/detail', [AdminController::class, 'detail'])->name('user.list');
     Route::get('/contact', [AdminController::class, 'contact'])->name('user.contact');
+    Route::get('/review', [UserReviewController::class, 'review'])->name('user.review_mobil');
+    Route::get('/add', [UserReviewController::class, 'review'])->name('user.add_review_mobil');
 });
 
 Route::get('/home',function(){
@@ -81,12 +84,3 @@ Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
 Route::get('user/logout', [HomeController::class, 'logout'])->name('logout');
 // Route::get('/owner/logout', [AdminController::class, 'logout'])->name('ologout');
 
-// Route CRUD Review Mobil
-Route::prefix('review')->group(function () {
-    Route::get('/view', [BarangController::class, 'BarangView'])->name('barang.view');
-    Route::get('/add', [BarangController::class, 'BarangAdd'])->name('barang.add');
-    // Route::post('/store', [BarangController::class, 'BarangRequest'])->name('barang.request');
-    // Route::get('/edit/{id}', [BarangController::class, 'BarangEdit'])->name('barang.edit');
-    // Route::post('/update/{id}', [BarangController::class, 'BarangUpdate'])->name('barang.update');
-    
-});

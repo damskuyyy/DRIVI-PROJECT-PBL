@@ -18,7 +18,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Tabel Hasil Review Mobil</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -30,17 +30,25 @@
                             <th>ID Mobil</th>
                             <th>Bintang</th>
                             <th>Komentar</th>
-                            <th>Action</th>
+                            <!-- <th>Action</th> -->
                         </tr>
                     </thead>
                     <tr>
                        <td>1</td>
-                       <td>lorem</td>
-                       <td>lorem</td>
-                       <td>lorem</td>
-                       <td>lorem</td>
-                       <td>lorem</td>
-                    </tr>
+                       <td>505</td>
+                       <td>212</td>
+                       <td>5</td>
+                       <td>KECE ABIEZZZ</td>
+                       <!-- <td> -->
+                        <!-- <a href="#" class="btn btn-info">Edit</a>
+                        <a href="#" id="delete" class="btn btn-danger">Delete</a>
+                         -->
+                       <!-- </td> -->
+                    <!-- </tr>
+                    <div class="box">
+                    <div class="box-header with-border">
+                    <a href="#" style="float:left;" type="button" class="btn btn-rounded btn-dark mb-5">Tambah Review</a>
+                    </div> -->
                     <tbody>
                     </tbody>
                 </table>

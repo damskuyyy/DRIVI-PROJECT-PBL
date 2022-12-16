@@ -4,7 +4,7 @@
        <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="#">Start Menyewa</a>
+        <a class="navbar-brand" href="#">Selamat dan Mulai Menyewa</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -24,6 +24,11 @@
             <li class="nav-item">
               <a class="nav-link" href="{{url('user/contact')}}">Contact</a>
             </li>
+            <a
+                    class="btn btn-dark mt-auto text-white"
+                    href="{{route('user.review_mobil')}}"
+                    >Review Mobil</a>
+                </div>
             {{-- </li class="nav-item" class="nav-link">
             <a href="{{ url('/login')}}"><button type="button" class="btn btn-outline-dark" >LOGIN DISINI</button></a>
             </li> --}}
@@ -64,8 +69,8 @@
       <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
           <h1 class="display-4 fw-bolder">Sewa Mobil</h1>
-          <p class="lead fw-normal text-white-50 mb-0">
-            hanya dengan satu sentuhan
+          <p>
+           Draivi Menyediakan Untuk Anda Jasa Sewa Mobil Terpercaya
           </p>
         </div>
       </div>
@@ -130,8 +135,7 @@
                   <a
                     class="btn btn-info mt-auto text-white"
                     href="{{route('user.detail')}}"
-                    >Detail</a
-                  >
+                    >Detail</a>
                 </div>
               </div>
             </div>
