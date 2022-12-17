@@ -9,6 +9,7 @@ use App\Http\Controllers\Owner\DeleteController;
 use App\Http\Controllers\Owner\EditController;
 use App\Http\Controllers\Owner\ListController;
 use App\Http\Controllers\Owner\OwnerController;
+use App\Http\Controllers\User\MobilController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth as Auth;
 
@@ -62,7 +63,7 @@ Route::get('/user/home',function(){
 })->name('user.home');
 
 Route::prefix('user')->group(function () {
-    Route::get('/home', function(){ return view('user.homepage');})->name('user.home');
+    Route::get('/home', [MobilController::class, 'viewMobil'])->name('user.home');
     Route::get('/detail', [AdminController::class, 'detail'])->name('user.list');
     Route::get('/contact', [AdminController::class, 'contact'])->name('user.contact');
 });

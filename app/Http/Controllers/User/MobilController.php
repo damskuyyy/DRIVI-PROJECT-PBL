@@ -10,7 +10,7 @@ class MobilController extends Controller
 {
     public function viewMobil()
     {
-        $data['allDataMobil'] = mobil::all();
-        return view('user.homepage');
+        $data['allDataMobil'] = Mobil::all();
+        return view('user.homepage', $data);
     }
 }
