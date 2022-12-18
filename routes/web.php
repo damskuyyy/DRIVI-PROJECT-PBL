@@ -52,7 +52,8 @@ Route::prefix('owner')->group(function () {
     Route::get('/add', [AddController::class, 'add'])->name('owner.add');
     Route::get('/list', [ListController::class, 'list'])->name('owner.list');
     Route::get('/review', [ReviewController::class, 'review'])->name('owner.review_mobil');
-    Route::get('/edit', [EditController::class, 'edit'])->name('owner.edit_mobil');
+    Route::get('/edit/{id}', [EditController::class, 'mobilEdit'])->name('owner.edit_mobil');
+    Route::post('/update/{id}', [EditController::class, 'mobilUpdate'])->name('owner.update_mobil');
     Route::post('/store', [AddController::class, 'mobilStore'])->name('owner.mobilStore');
 
 });
