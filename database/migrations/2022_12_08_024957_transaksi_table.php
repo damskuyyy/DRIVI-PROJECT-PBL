@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_user');
-            $table->bigInteger('id_mobil');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('mobil_id');
+            $table->foreign('mobil_id')->references('id')->on('mobils')->onDelete('cascade');
             $table->datetime('tanggal_transaksi');
             $table->string('status_transaksi');
             $table->datetime('tanggal_sewa');

@@ -68,11 +68,15 @@
                         </tr>
                     </tfoot> --}}
                     <tbody>
-                        @foreach($allDataTransaksi as $key => $transaction)
+                           {{-- <!-- @foreach($user->transactionsuser as $key=> $transaction) --> --}} 
+                        
+                            @foreach($user->transactionsuser as $key=> $transaction)
+                            
+                            
 							<tr>
                                 <td>{{$key+1}}</td>
-								<td>{{$transaction->id_user}}</td>
-								<td>{{$transaction->id_mobil}}</td>
+								<td>{{$transaction->user_id}}</td>
+								<td>{{$transaction->mobil_id}}</td>
 								<td>{{$transaction->tanggal_transaksi}}</td>
 								<td>{{$transaction->tanggal_sewa}}</td>
 								<td>{{$transaction->tanggal_pengembalian}}</td>

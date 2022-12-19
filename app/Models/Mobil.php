@@ -17,4 +17,5 @@ class Mobil extends Model
     {
         return $this->belongsTo('App\Models\Users');
     }
+
 }

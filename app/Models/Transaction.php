@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class Transaction extends Model
 {
@@ -25,5 +26,10 @@ class Transaction extends Model
             'status_pengembalian',
             'denda'
     ];
+
+    public function usertransactions()
+    {
+        return $this->belongsTo(User::class);
+    }
 
 }

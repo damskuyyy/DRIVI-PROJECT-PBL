@@ -55,7 +55,7 @@ Route::prefix('owner')->group(function () {
     Route::get('/review', [ReviewController::class, 'review'])->name('owner.review_mobil');
     Route::get('/edit', [EditController::class, 'edit'])->name('owner.edit_mobil');
     Route::post('/store', [AddController::class, 'mobilStore'])->name('owner.mobilStore');
-
+    Route::get('/list/transaksi', [TransactionController::class, 'listTransaksi'])->name('transaksi.list');
 });
     
 
@@ -93,7 +93,7 @@ Route::prefix('review')->group(function () {
     
 });
 
-Route::prefix('transaksi')->group(function () {
-    Route::get('/list', [TransactionController::class, 'listTransaksi'])->name('transaksi.list');
-    // Route::get('/pending', [TransactionController::class, 'add'])->name('transaction.pending');
-});
+// Route::prefix('transaksi')->group(function () {
+//     Route::get('/list', [TransactionController::class, 'listTransaksi'])->name('transaksi.list');
+//     // Route::get('/pending', [TransactionController::class, 'add'])->name('transaction.pending');
+// });

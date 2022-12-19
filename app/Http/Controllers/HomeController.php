@@ -10,6 +10,7 @@ class HomeController extends Controller
    {
    //  return view('admin.frontend.homepage');
    if(!Auth::user()){
+
       return redirect()->route('home');
    }
    if(Auth::user()->type == 0){
