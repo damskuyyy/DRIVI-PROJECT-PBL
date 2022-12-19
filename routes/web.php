@@ -69,7 +69,7 @@ Route::get('/user/home',function(){
 })->name('user.home');
 
 Route::prefix('user')->group(function () {
-    Route::get('/home', function(){ return view('user.homepage');})->name('user.home');
+    Route::get('/home', [MobilController::class, 'viewMobil'])->name('user.home');
     Route::get('/detail', [AdminController::class, 'detail'])->name('user.list');
     Route::get('/contact', [AdminController::class, 'contact'])->name('user.contact');
     Route::get('/transaksi/add',[SewaController::class, 'sewaAdd'])->name('usersewa.add');
