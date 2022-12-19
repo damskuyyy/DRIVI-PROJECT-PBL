@@ -19,15 +19,15 @@ class AdminController extends Controller
     }
 
     public function home(){
-        return view('admin.frontend.homepage');
+        return view('user.homepage');
     }
 
     public function detail(){
-        return view('admin.frontend.detail');
+        return view('user.detail');
     }
 
     public function contact(){
-        return view('admin.frontend.contact');
+        return view('user.contact');
     }
      
 }
