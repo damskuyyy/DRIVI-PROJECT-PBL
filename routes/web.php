@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\Owner\ReviewController;
 use App\Http\Controllers\Owner\AddController;
@@ -12,7 +13,6 @@ use App\Http\Controllers\Owner\ListController;
 use App\Http\Controllers\Owner\OwnerController;
 use App\Http\Controllers\Owner\TransactionController;
 
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\User\MobilController;
 use App\Http\Controllers\User\SewaController;
 
@@ -84,10 +84,14 @@ Route::get('/home',function(){
 // Route::get('/', [AdminController::class, 'home'])->name('admin.frontend.index');
 Route::get('users/detail', [AdminController::class, 'detail'])->name('user.detail');
 Route::get('user/contact', [AdminController::class, 'contact'])->name('user.contact');
+
+
 // Route Logout
 Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
 Route::get('user/logout', [HomeController::class, 'logout'])->name('logout');
 // Route::get('/owner/logout', [AdminController::class, 'logout'])->name('ologout');
+
+
 
 // Route CRUD Review Mobil
 Route::prefix('review')->group(function () {
@@ -98,6 +102,7 @@ Route::prefix('review')->group(function () {
     // Route::post('/update/{id}', [BarangController::class, 'BarangUpdate'])->name('barang.update');
     
 });
+
 
 // Route::prefix('transaksi')->group(function () {
 //     Route::get('/list', [TransactionController::class, 'listTransaksi'])->name('transaksi.list');

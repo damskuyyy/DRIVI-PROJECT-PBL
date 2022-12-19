@@ -1,4 +1,4 @@
-@extends('transaction.component.main')
+@extends('owner.component.main')
 
 @section('content')
 
@@ -7,7 +7,7 @@
 
     <!-- Main Content -->
     <div id="content">
-    @include('transaction.component.navbar')
+    @include('owner.component.navbar')
 <div class="container-fluid">
 
     <!-- Page Heading -->
