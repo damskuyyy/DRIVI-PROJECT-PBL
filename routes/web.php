@@ -9,8 +9,10 @@ use App\Http\Controllers\Owner\DeleteController;
 use App\Http\Controllers\Owner\EditController;
 use App\Http\Controllers\Owner\ListController;
 use App\Http\Controllers\Owner\OwnerController;
-use App\Http\Controllers\Owner\TransactionController;
+use App\Http\Controllers\User\MobilController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Owner\TransactionController;
+
 
 use Illuminate\Support\Facades\Auth as Auth;
 
@@ -53,7 +55,8 @@ Route::prefix('owner')->group(function () {
     Route::get('/add', [AddController::class, 'add'])->name('owner.add');
     Route::get('/list', [ListController::class, 'list'])->name('owner.list');
     Route::get('/review', [ReviewController::class, 'review'])->name('owner.review_mobil');
-    Route::get('/edit', [EditController::class, 'edit'])->name('owner.edit_mobil');
+    Route::get('/edit/{id}', [EditController::class, 'mobilEdit'])->name('owner.edit_mobil');
+    Route::post('/update/{id}', [EditController::class, 'mobilUpdate'])->name('owner.update_mobil');
     Route::post('/store', [AddController::class, 'mobilStore'])->name('owner.mobilStore');
     Route::get('/list/transaksi', [TransactionController::class, 'listTransaksi'])->name('transaksi.list');
 });
@@ -64,7 +67,7 @@ Route::get('/user/home',function(){
 })->name('user.home');
 
 Route::prefix('user')->group(function () {
-    Route::get('/home', function(){ return view('user.homepage');})->name('user.home');
+    Route::get('/home', [MobilController::class, 'viewMobil'])->name('user.home');
     Route::get('/detail', [AdminController::class, 'detail'])->name('user.list');
     Route::get('/contact', [AdminController::class, 'contact'])->name('user.contact');
 });
