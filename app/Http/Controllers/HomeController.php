@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth as Auth;
+use App\Models\Mobil;
+
 
 class HomeController extends Controller
 {
@@ -10,8 +12,9 @@ class HomeController extends Controller
    {
    //  return view('admin.frontend.homepage');
    if(!Auth::user()){
+      $data['allDataMobil'] = Mobil::all();
+      return view('user.index', $data);
 
-      return redirect()->route('home');
    }
    if(Auth::user()->type == 0){
       return redirect()->route('user.home');
