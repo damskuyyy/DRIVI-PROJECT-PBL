@@ -60,11 +60,11 @@
       </div>
     </nav>
     <!-- Header-->
-    <header class="bg-dark py-5">
-      <div class="container px-4 px-lg-5 my-5">
+    <header class="bg-dark py-2">
+      <div class="container px-1 px-lg-2 my-2">
         <div class="text-center text-white">
-          <h1 class="display-4 fw-bolder">Sewa Mobil</h1>
-          <p class="lead fw-normal text-white-50 mb-0">
+          <h1 class="display-10 fw-bolder">Sewa Mobil</h1>
+          <p class="lead fw-normal text-white-15 mb-0">
             hanya dengan satu sentuhan
           </p>
         </div>
@@ -131,7 +131,7 @@
               <!-- Product actions-->
               <div class="card-footer border-top-0 bg-transparent">
                 <div class="text-center">
-                  <a class="btn btn-primary mt-auto"  href="https://wa.me/+6282172519703" target="blank">Sewa</a>
+                  <a class="btn btn-primary mt-auto"  href="{{route('user.sewa_add',$mobil->id)}}" target="blank">Sewa</a>
                   <a
                     class="btn btn-info mt-auto text-white"
                     href="{{route('user.detail')}}"

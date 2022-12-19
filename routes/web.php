@@ -72,7 +72,8 @@ Route::prefix('user')->group(function () {
     Route::get('/home', [MobilController::class, 'viewMobil'])->name('user.home');
     Route::get('/detail', [AdminController::class, 'detail'])->name('user.list');
     Route::get('/contact', [AdminController::class, 'contact'])->name('user.contact');
-    Route::get('/transaksi/add',[SewaController::class, 'sewaAdd'])->name('usersewa.add');
+    Route::get('/transaksi/add/{id}',[SewaController::class, 'sewaAdd'])->name('user.sewa_add');
+    Route::post('/transaksi/create',[SewaController::class, 'sewaCreate'])->name('user.sewa_mobil');
 });
 
 Route::get('/home',function(){
