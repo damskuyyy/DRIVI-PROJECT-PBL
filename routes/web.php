@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+
 use App\Http\Controllers\Owner\ReviewController;
 use App\Http\Controllers\Owner\AddController;
 use App\Http\Controllers\Owner\DeleteController;
@@ -13,6 +14,8 @@ use App\Http\Controllers\Owner\TransactionController;
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\User\MobilController;
+use App\Http\Controllers\User\SewaController;
+
 
 use Illuminate\Support\Facades\Auth as Auth;
 
@@ -69,6 +72,7 @@ Route::prefix('user')->group(function () {
     Route::get('/home', function(){ return view('user.homepage');})->name('user.home');
     Route::get('/detail', [AdminController::class, 'detail'])->name('user.list');
     Route::get('/contact', [AdminController::class, 'contact'])->name('user.contact');
+    Route::get('/transaksi/add',[SewaController::class, 'sewaAdd'])->name('usersewa.add');
 });
 
 Route::get('/home',function(){
