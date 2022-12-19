@@ -83,7 +83,7 @@ Route::get('/home',function(){
 
 // Route Homepage
 // Route::get('/', [AdminController::class, 'home'])->name('admin.frontend.index');
-Route::get('users/detail', [AdminController::class, 'detail'])->name('user.detail');
+Route::get('user/detail', [AdminController::class, 'detail'])->name('user.detail');
 Route::get('user/contact', [AdminController::class, 'contact'])->name('user.contact');
 
 
