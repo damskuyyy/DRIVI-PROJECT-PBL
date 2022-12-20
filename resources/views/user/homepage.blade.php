@@ -24,11 +24,9 @@
             <li class="nav-item">
               <a class="nav-link" href="{{url('user/contact')}}">Contact</a>
             </li>
-            <a
-                    class="btn btn-dark mt-auto text-white"
-                    href="{{route('user.review_mobil')}}"
-                    >Review Mobil</a>
-                </div>
+            <li class="nav-item">
+              <a class="nav-link active" href="{{route('user.review_mobil')}}">Review Mobil</a>
+            </li>
             {{-- </li class="nav-item" class="nav-link">
             <a href="{{ url('/login')}}"><button type="button" class="btn btn-outline-dark" >LOGIN DISINI</button></a>
             </li> --}}
