@@ -59,13 +59,13 @@ Route::prefix('owner')->group(function () {
 });
     
 
-Route::get('/user/home',function(){
-    return view('user.homepage');
-})->name('user.home');
+// Route::get('/user/home',function(){
+//     return view('user.homepage');
+// })->name('user.home');
 
 Route::prefix('user')->group(function () {
     Route::get('/home', [MobilController::class, 'viewMobil'])->name('user.home');
-    Route::get('/detail', [AdminController::class, 'detail'])->name('user.list');
+    Route::get('/detail/{id}', [MobilController::class, 'detailView'])->name('user.detail_mobil');
     Route::get('/contact', [AdminController::class, 'contact'])->name('user.contact');
 });
 
@@ -76,8 +76,8 @@ Route::get('/home',function(){
 
 // Route Homepage
 // Route::get('/', [AdminController::class, 'home'])->name('admin.frontend.index');
-Route::get('users/detail', [AdminController::class, 'detail'])->name('user.detail');
-Route::get('user/contact', [AdminController::class, 'contact'])->name('user.contact');
+// Route::get('users/detail', [AdminController::class, 'detail'])->name('user.detail');
+// Route::get('user/contact', [AdminController::class, 'contact'])->name('user.contact');
 // Route Logout
 Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
 Route::get('user/logout', [HomeController::class, 'logout'])->name('logout');

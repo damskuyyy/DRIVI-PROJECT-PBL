@@ -14,13 +14,13 @@ class EditController extends Controller
         return view('owner.edit_mobil', compact('editData'));
        }
 
-       public function mobilUpdate(Request $request){
-        $validateData=$request->validate([
-            'email'=>'required|unique:users',
-            'textNama'=>'required',
-        ]);
+       public function mobilUpdate(Request $request, $id){
+        // $validateData=$request->validate([
+        //     'email'=>'required|unique:users',
+        //     'textNama'=>'required',
+        // ]);
 
-        $id=$request->mobil;
+        // $id=$request->mobil;
         $mobil= Mobil::find($id);
         // $mobil->user_id=$user_id->id;
         $mobil->nama_mobil=$request->nama_mobil;
@@ -30,7 +30,7 @@ class EditController extends Controller
         $mobil->jumlah_kursi=$request->jumlah_kursi;
         $mobil->bahan_bakar=$request->bahan_bakar;
         $mobil->jenis_transmisi=$request->jenis_transmisi;
-        $mobil->mobil_photo_path=$request->mobil_photo_path;
+        // $mobil->mobil_photo_path=$request->mobil_photo_path;
         // if($request->password!=""){
         //     $data->password=bcrypt($request->password);
         // }

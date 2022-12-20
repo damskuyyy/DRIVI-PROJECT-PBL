@@ -13,4 +13,10 @@ class MobilController extends Controller
         $data['allDataMobil'] = Mobil::all();
         return view('user.homepage', $data);
     }
+
+    public function detailView($id)
+    {
+        $detailData=Mobil::find($id);
+        return view('user.detail_mobil', compact('detailData'));
+    }
 }
