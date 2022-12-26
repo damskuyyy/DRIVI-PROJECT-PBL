@@ -66,14 +66,15 @@ Route::prefix('user')->group(function () {
     Route::get('/home', function(){ return view('user.homepage');})->name('user.home');
     Route::get('/detail', [AdminController::class, 'detail'])->name('user.list');
     Route::get('/contact', [AdminController::class, 'contact'])->name('user.contact');
-    Route::get('/review', [UserReviewController::class, 'review'])->name('user.review_mobil');
-    Route::get('/add', [UserReviewController::class, 'review'])->name('user.add_review_mobil');
+    Route::get('/read', [UserReviewController::class, 'ReviewRead'])->name('user.review_mobil');
+    Route::get('/add', [UserReviewController::class, 'ReviewAdd'])->name('user.add_review_mobil');
+    Route::post('/store', [UserReviewController::class, 'ReviewRequest'])->name('user.review_mobil');
+    
 });
 
 Route::get('/home',function(){
     return view('user.index');
 })->name('home');
-
 
 // Route Homepage
 // Route::get('/', [AdminController::class, 'home'])->name('admin.frontend.index');

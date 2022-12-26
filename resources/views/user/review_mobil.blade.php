@@ -1,58 +1,81 @@
 @extends('user.component.main')
 
 @section('content')
+<div id="content-wrapper" class="d-flex flex-column">
 
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+    <!-- Main Content -->
+    <div id="content">
 
-        <!-- Main Content -->
-        <div id="content">
+        <div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+        For more information about DataTables, please visit the <a target="_blank"
+            href="https://datatables.net">official DataTables documentation</a>.</p>
 
-            @include('owner.component.navbar')
-
-            <!-- Begin Page Content -->
-            <div class="container-fluid">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Review Mobil</h6>
-                </div>
-                <div class="card-body">
-
-                <form class="row g-3" method="POST" action="{{route('user.review')}}" enctype="multipart/form-data">
-                  @csrf
-                    {{-- <div class="col-md-6">
-                      <label for="user_id" class="form-label">Id Review</label>
-                      <input type="text" class="form-control disabled" id="user_id" name="user_id" value="{{$user_id->id}}" readonly>
-                    </div> --}}
-                    <div class="col-md-6">
-                      <label for="nama_mobil" class="form-label">Id Detail User</label>
-                      <input type="text" class="form-control" id="id_detail_user" name="id_detail_user" required data-validation-required-message="Tidak boleh kosong" >
-                    </div>
-                    <div class="col-md-6">
-                      <label for="jenis_mobil" class="form-label">Bintang</label>
-                      <input type="text" class="form-control" id="bintang" name="bintang" required data-validation-required-message="Tidak boleh kosong">
-                    </div>
-                    <div class="col-md-6">
-                      <label for="nama_mobil" class="form-label">Id Mobil</label>
-                      <input type="text" class="form-control" id="id_mobil" name="id_mobil" required data-validation-required-message="Tidak boleh kosong" >
-                    </div>
-                    <div class="col-md-12 pt-4">
-                      <label for="deskripsi" class="form-label">Komentar</label>
-                      <textarea type="text" class="form-control" id="komentar" name="komentar" required data-validation-required-message="Tidak boleh kosong" placeholder="Tulis Komentar Mobil"></textarea>
-                    </div>  
-                    <div class="col-12 pt-4">
-                      <button type="submit" class="btn btn-dark col-12" required data-validation-required-message="Tidak boleh kosong">Tambahkan</button>
-                    </div>
-                  </form>
-
-
-
- 
-              <!-- Content Row -->
+    <!-- DataTables Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Tabel Hasil Review Mobil</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <!-- <div class="box">
+                    <div class="box-header with-border">
+                    <a href= "#" style="float:left;" type="button" class="btn btn-rounded btn-dark mb-5">Tambah Review</a>
+                    </div> -->
+                        <tr>
+                            <th>No</th>
+                            <th>ID Detail User</th>
+                            <th>ID Mobil</th>
+                            <th>Bintang</th>
+                            <th>Komentar</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($allDataReview as $key => $review)
+                    <tr>
+                       <td>{{ $key+1 }}</td>
+                       <td>{{ $review->id_detail_user }}</td>
+                       <td>{{ $review->id_mobil }}</td>
+                       <td>{{ $review->bintang }}</td>
+                       <td>{{ $review->komentar }}</td>
+                       <td>
+                        <a href="#" class="btn btn-info">Edit</a>
+                        <a href="#" id="delete" class="btn btn-danger">Delete</a>
+                       </td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-        </div>
-
-            <!-- /.container-fluid -->
-
+</div>
 @endsection
+              
+
+             <!-- /.container-fluid -->
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
+
+</body> 
+
+</html>

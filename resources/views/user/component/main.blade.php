@@ -16,6 +16,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="{{asset ('backend.jquery.rateyo.css')}}"/>
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -82,6 +83,11 @@
     <!-- Page level custom scripts -->
     <script src="{{asset('backend/js/demo/chart-area-demo.js')}}"></script>
     <script src="{{asset('backend/js/demo/chart-pie-demo.js')}}"></script>
+
+    <!-- Page Rate -->
+    <script src="{{asset ('backend/jquery.js') }}"></script>
+    <script src="{{asset ('backens/jquery.rateyo.js') }}"></script>
+
 
     </body>
   </html>
