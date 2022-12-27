@@ -18,7 +18,7 @@
                 </div>
                 <div class="card-body">
 
-                <form class="row g-3" method="POST" action="{{route('user.review_mobil')}}">
+                <form class="row g-3" method="POST" action="{{route('review.request')}}">
                   @csrf
                      <!-- # -->
                     <div class="col-md-6">

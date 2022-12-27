@@ -10,7 +10,7 @@ class UserReviewController extends Controller
 {
     public function ReviewRead(){
         $data['allDataReview'] = Review::all();
-        return view('user.review_mobil', $data);
+        return view('user.read_review_mobil', $data);
     }
 
     public function ReviewAdd(){
@@ -24,6 +24,15 @@ class UserReviewController extends Controller
             $data->bintang = $request->bintang;
             $data->komentar = $request->komentar;
             $data->save();
-            return redirect()->route('user.review_mobil')->with('info', 'Tambah Barang Berhasil');
+            return redirect()->route('user.read_review_mobil')->with('info', 'Tambah Barang Berhasil');
+    }
+
+    public function ReviewDelete($id)
+    {
+        $deleteData = Review::find($id);
+        $deleteData->delete();
+
+
+        return redirect()->route('user.read_review_mobil')->with('info', 'Delete Barang Berhasil');
     }
 }

@@ -66,9 +66,10 @@ Route::prefix('user')->group(function () {
     Route::get('/home', function(){ return view('user.homepage');})->name('user.home');
     Route::get('/detail', [AdminController::class, 'detail'])->name('user.list');
     Route::get('/contact', [AdminController::class, 'contact'])->name('user.contact');
-    Route::get('/read', [UserReviewController::class, 'ReviewRead'])->name('user.review_mobil');
+    Route::get('/read', [UserReviewController::class, 'ReviewRead'])->name('user.read_review_mobil');
     Route::get('/add', [UserReviewController::class, 'ReviewAdd'])->name('user.add_review_mobil');
-    Route::post('/store', [UserReviewController::class, 'ReviewRequest'])->name('user.review_mobil');
+    Route::post('/store', [UserReviewController::class, 'ReviewRequest'])->name('review.request');
+    Route::get('/delete/{id}', [UserReviewController::class, 'ReviewDelete'])->name('review.delete');
     
 });
 

@@ -22,10 +22,10 @@
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
-                    <!-- <div class="box">
+                    <div class="box">
                     <div class="box-header with-border">
-                    <a href= "#" style="float:left;" type="button" class="btn btn-rounded btn-dark mb-5">Tambah Review</a>
-                    </div> -->
+                    <a href= "{{route('user.add_review_mobil')}}" style="float:left;" type="button" class="btn btn-rounded btn-dark mb-5">Tambah Review</a>
+                    </div>
                         <tr>
                             <th>No</th>
                             <th>ID Detail User</th>
@@ -45,7 +45,7 @@
                        <td>{{ $review->komentar }}</td>
                        <td>
                         <a href="#" class="btn btn-info">Edit</a>
-                        <a href="#" id="delete" class="btn btn-danger">Delete</a>
+                        <a href="{{ route('review.delete', $review->id) }}" id="delete" class="btn btn-danger">Delete</a>
                        </td>
                     </tr>
                     @endforeach
