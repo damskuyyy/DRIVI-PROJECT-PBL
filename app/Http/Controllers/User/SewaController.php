@@ -42,4 +42,28 @@ class SewaController extends Controller
         // return dd ($user);
         return view('user.sewa_list', compact('user_id'));
     }
+
+
+    public function sewaEdit($id){
+        $user_id = Auth::user();
+        $editData=Transaction::find($id);
+        return view('user.sewa_edit', compact('editData','user_id'));
+       }
+
+       public function sewaUpdate(Request $request, $id){
+        $user_id = Auth::user();
+        $transaction = Transaction::find($id);
+        $transaction -> tanggal_sewa = $request->tanggal_sewa;
+        $transaction -> tanggal_pengembalian = $request->tanggal_pengembalian;
+        $transaction->save();
+
+        return Redirect()->route('user.sewa.list')->with('info','Jadwal Sewa Berhasil Diupdate!!');
+        
+    }
+
+    public function sewaDelete($id){
+        $editData=Transaction::find($id);
+        $editData->delete();
+        return redirect()->route('user.sewa.list')->with('info','Sewa Dibatalkan');
+    }
 }

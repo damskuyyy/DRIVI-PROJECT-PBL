@@ -86,8 +86,8 @@
                             <td>{{$transaction->status_transaksi}}</td>
                             
                             <td>
-                                <a href="{{ url ('owner/edit', '$transaction->id')}}" class="btn btn-dark" metho>Ubah Jadwal Sewa</a>
-                                <a href="{{ url ('owner/edit', '$transaction->id')}}" class="btn btn-warning" metho>Batalkan Pesanan</a>
+                                <a href="{{ url ('user/sewa/edit',$transaction->id)}}" class="btn btn-dark" metho>Ubah Jadwal Sewa</a>
+                                <a href="{{ url ('user/sewa/delete',$transaction->id)}}" class="btn btn-warning" metho>Batalkan Pesanan</a>
                             </td>
                         </tr>
                         @endforeach

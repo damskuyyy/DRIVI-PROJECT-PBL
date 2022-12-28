@@ -76,6 +76,9 @@ Route::prefix('user')->group(function () {
     Route::get('/transaksi/add/{id}',[SewaController::class, 'sewaAdd'])->name('user.sewa_add');
     Route::post('/transaksi/create',[SewaController::class, 'sewaCreate'])->name('user.sewa_mobil');
     Route::get('/sewa/list', [SewaController::class, 'sewaList'])->name('user.sewa.list');
+    Route::get('/sewa/edit/{id}', [SewaController::class, 'sewaEdit'])->name('user.sewa_edit');
+    Route::post('/sewa/update/{id}', [SewaController::class, 'sewaUpdate'])->name('user.sewa_update');
+    Route::get('/sewa/delete/{id}',[SewaController::class, 'sewaDelete'])->name('user.sewa_delete');
     Route::get('/review', [UserReviewController::class, 'review'])->name('user.review_mobil');
     Route::get('/add', [UserReviewController::class, 'review'])->name('user.add_review_mobil');
 });

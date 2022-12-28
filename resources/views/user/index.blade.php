@@ -27,7 +27,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#Aplication">Download App</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#aplikasi">Download App</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#album">Album Cars</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url('/login')}}">Login</a></li>
@@ -36,7 +36,7 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead bg-dark text-white text-center">
+        <header id="aplikasi" class="masthead bg-dark text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
                 <div class="img-fluid" style="width: 18rem;">
@@ -56,6 +56,7 @@
                 <div>
                 <!-- Masthead Subheading-->
                 <a class="btn btn-secondary" href="{{ url('/login')}}" role="button">Daftarkan Sekarang</a>
+                <a class="btn btn-secondary" href="" role="button">Download Aplikasi Mobile</a>
             </div>
         </header>
         <!-- Portfolio Section-->
