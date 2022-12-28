@@ -45,21 +45,21 @@
                                             @csrf
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user" name="name" id="name"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                id="name" aria-describedby="emailHelp"
                                                 placeholder="Masukkan nama lengkap" />
                                         </div>
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user" name="email"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                id="email" aria-describedby="emailHelp"
                                                 placeholder="Masukkan Email" />
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user" name="password"
-                                                id="exampleInputPassword" placeholder="Password" />
+                                                id="password" placeholder="Password" />
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user" name="password"
-                                                id="exampleInputPassword" placeholder="Password" />
+                                                id="password_confirmation" placeholder="Password_Confirm" />
                                         </div>
 
                                         <div class="form-group">

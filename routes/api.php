@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\Auth\AuthController;
 use App\Http\Controllers\API\Owner\MobilController;
+use App\Http\Controllers\API\Transaction\TransactionController;
 use App\Http\Controllers\API\Owner\ReviewController;
 use App\Http\Controllers\API\Owner\ReviewMobilController;
 use App\Models\ReviewMobil;
@@ -41,5 +42,9 @@ Route::put('review/update/{id}',[ReviewController::class, 'Update']);
 Route::delete('review/delete/{id}',[ReviewController::class, 'Delete']);
 
 
-
-
+Route::prefix('/sewa')->group(function(){
+    Route::get('/view',[TransactionController::class, 'TransactionView']);
+    Route::post('/add',[TransactionController::class, 'TransactionAdd']);
+    Route::put('/update/{id}',[TransactionController::class, 'TransactionUpdate']);
+    Route::delete('/delete/{id}',[TransactionController::class, 'TransactionDelete']);
+});

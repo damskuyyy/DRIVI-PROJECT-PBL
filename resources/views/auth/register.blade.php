@@ -1,3 +1,4 @@
+
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
@@ -8,7 +9,6 @@
 
         <form method="POST" action="{{ route('register') }}">
             @csrf
-
             
             <div class="mt-4">
                 <x-jet-label for="name" value="{{ __('Name') }}" />

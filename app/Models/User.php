@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -63,5 +64,10 @@ class User extends Authenticatable
     public function mobils()
     {
         return $this->hasMany('App\Models\Mobil');
+    }
+
+    public function transactionsuser()
+    {
+        return $this->hasMany('App\Models\Transaction');
     }
 }

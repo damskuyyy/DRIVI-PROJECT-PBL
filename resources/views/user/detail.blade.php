@@ -1,36 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Rental Mobil Detail - Laravel</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="{{ asset('frontend/assets/favicon.ico')}}" />
-    <!-- Bootstrap icons-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="{{ asset('frontend/css/styles.css')}}" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('frontend/css/custom.css')}}" />
-  </head>
-  <body>
-    @csrf
-        <!-- Header-->
-    <header class="bg-dark py-5">
-      <div class="container px-4 px-lg-5 my-5">
+
+@extends('user.component.main')
+
+@section('content')
+  
+    <!-- Header-->
+    <header class="bg-dark py-2">
+      <div class="container px-1 px-lg-2 my-2">
         <div class="text-center text-white">
-          <h1 class="display-4 fw-bolder">Detail Mobil</h1>
+          <h1 class="display-10 fw-bolder">Detail Mobil</h1>
         </div>
       </div>
     </header>
@@ -132,17 +109,4 @@
         </div>
       </div>
     </section>
-    <!-- Footer-->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">
-          Copyright &copy; Your Website 2022
-        </p>
-      </div>
-    </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="{{ asset('frontend/js/scripts.js')}}"></script>
-  </body>
-</html>
+ @endsection

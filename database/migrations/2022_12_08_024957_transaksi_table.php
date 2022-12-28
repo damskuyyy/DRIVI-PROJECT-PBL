@@ -13,7 +13,21 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('transactions', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('mobil_id');
+            $table->foreign('mobil_id')->references('id')->on('mobils')->onDelete('cascade');
+            $table->datetime('tanggal_transaksi');
+            $table->string('status_transaksi');
+            $table->datetime('tanggal_sewa');
+            $table->datetime('tanggal_pengembalian');            
+            $table->string('metode_pembayaran');
+            $table->string('status_pengembalian');
+            $table->integer('denda');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('transactions');
     }
 };
