@@ -74,7 +74,7 @@
 								<td>{{$mobil->jenis_transmisi}}</td>
 								
 								<td>
-                                    <a href="#" class="btn btn-dark">Edit</a>
+                                    <a href="{{route('owner.edit_mobil', $mobil->id)}}" class="btn btn-dark">Edit</a>
                                     {{-- <a href="#" class="btn btn-success">Detail</a> --}}
                                     <a href="{{route('owner.mobil_delete', $mobil->id)}}"  class="btn btn-outline-danger" >Hapus</a>
                                 </td>

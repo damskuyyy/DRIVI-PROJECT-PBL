@@ -25,34 +25,8 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/custom.css')}}" />
   </head>
   <body>
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="./index.html">Start Bootstrap</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Header-->
+    @csrf
+        <!-- Header-->
     <header class="bg-dark py-5">
       <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
@@ -78,10 +52,7 @@
                   <!-- Product name-->
                   <h3 class="fw-bolder text-primary">Deskripsi</h3>
                   <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Ipsa dolor corrupti porro, sit ex nemo itaque, est
-                    voluptatum illum dignissimos facilis alias facere rem
-                    consequatur?
+                    {{$editData->deskripsi}}
                   </p>
                   <div class="mobil-info-list border-top pt-4">
                     <ul class="list-unstyled">
@@ -128,7 +99,7 @@
                       class="border-bottom p-2 d-flex justify-content-between"
                     >
                       <span>Bahan Bakar</span>
-                      <span style="font-weight: 600">Bensin</span>
+                      <span style="font-weight: 600">{{$mobil->bahan_bakar}}</span>
                     </li>
                     <li
                       class="border-bottom p-2 d-flex justify-content-between"
