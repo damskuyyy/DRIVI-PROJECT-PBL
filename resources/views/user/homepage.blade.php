@@ -1,18 +1,17 @@
     @extends('user.component.main')
 
     @section('content')
-       
-    <!-- Header-->
-    <header class="bg-dark py-2">
-      <div class="container px-1 px-lg-2 my-2">
-        <div class="text-center text-white">
-          <h1 class="display-10 fw-bolder">Sewa Mobil</h1>
-          <p class="lead fw-normal text-white-15 mb-0">
-            hanya dengan satu sentuhan
-          </p>
-        </div>
-      </div>
-    </header>
+    <!-- Masthead-->
+    <header class="masthead bg-dark text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Heading-->
+                <p class="masthead-subheading font-weight-light mb-10">DRAIVI DIMARI SEWA MOBIL DISINI</p>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Jasa Rental Mobil Solusi Termudah dan Terpecaya di Banyuwangi</p>
+            </div>
+        </header>
+
     <!-- Section-->
     <section class="py-5">
       <div class="container px-4 px-lg-5 mt-5">
@@ -77,9 +76,8 @@
                   <a class="btn btn-primary mt-auto"  href="{{route('user.sewa_add',$mobil->id)}}" target="blank">Sewa</a>
                   <a
                     class="btn btn-info mt-auto text-white"
-                    href="{{route('user.detail')}}"
-                    >Detail</a
-                  >
+                    href="{{route('user.detail',$mobil->id)}}"
+                    target="blank">Detail</a>
                 </div>
               </div>
             </div>

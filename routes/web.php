@@ -17,6 +17,7 @@ use App\Http\Controllers\User\MobilController;
 use App\Http\Controllers\User\SewaController;
 
 
+use App\Http\Controllers\User\UserReviewController;
 use Illuminate\Support\Facades\Auth as Auth;
 
 use function PHPSTORM_META\type;
@@ -76,6 +77,8 @@ Route::prefix('user')->group(function () {
     Route::post('/transaksi/create',[SewaController::class, 'sewaCreate'])->name('user.sewa_mobil');
     Route::get('/sewa/list', [SewaController::class, 'sewaList'])->name('user.sewa.list');
 
+    Route::get('/review', [UserReviewController::class, 'review'])->name('user.review_mobil');
+    Route::get('/add', [UserReviewController::class, 'review'])->name('user.add_review_mobil');
 });
 
 Route::get('/home',function(){
@@ -85,7 +88,7 @@ Route::get('/home',function(){
 
 // Route Homepage
 // Route::get('/', [AdminController::class, 'home'])->name('admin.frontend.index');
-Route::get('user/detail', [AdminController::class, 'detail'])->name('user.detail');
+Route::get('user/detail/{id}', [AdminController::class, 'detail'])->name('user.detail');
 Route::get('user/contact', [AdminController::class, 'contact'])->name('user.contact');
 
 
@@ -96,15 +99,6 @@ Route::get('user/logout', [HomeController::class, 'logout'])->name('logout');
 
 
 
-// Route CRUD Review Mobil
-Route::prefix('review')->group(function () {
-    Route::get('/view', [BarangController::class, 'BarangView'])->name('barang.view');
-    Route::get('/add', [BarangController::class, 'BarangAdd'])->name('barang.add');
-    // Route::post('/store', [BarangController::class, 'BarangRequest'])->name('barang.request');
-    // Route::get('/edit/{id}', [BarangController::class, 'BarangEdit'])->name('barang.edit');
-    // Route::post('/update/{id}', [BarangController::class, 'BarangUpdate'])->name('barang.update');
-    
-});
 
 
 // Route::prefix('transaksi')->group(function () {

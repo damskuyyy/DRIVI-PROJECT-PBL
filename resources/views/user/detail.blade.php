@@ -3,14 +3,12 @@
 
 @section('content')
   
-    <!-- Header-->
-    <header class="bg-dark py-2">
-      <div class="container px-1 px-lg-2 my-2">
-        <div class="text-center text-white">
-          <h1 class="display-10 fw-bolder">Detail Mobil</h1>
-        </div>
-      </div>
-    </header>
+<!-- Masthead-->
+<header class="masthead bg-white text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+            </div>
+        </header>
+
     <!-- Section-->
     <section class="py-5">
       <div class="container px-4 px-lg-5 mt-5">
@@ -28,12 +26,7 @@
                 <div>
                   <!-- Product name-->
                   <h3 class="fw-bolder text-primary">Deskripsi</h3>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Ipsa dolor corrupti porro, sit ex nemo itaque, est
-                    voluptatum illum dignissimos facilis alias facere rem
-                    consequatur?
-                  </p>
+                  <p>{{$detailMobil->deskripsi}}</p>
                   <div class="mobil-info-list border-top pt-4">
                     <ul class="list-unstyled">
                       <li>
@@ -67,10 +60,10 @@
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
-                    <h5 class="fw-bolder">Special Item</h5>
+                    <h5 class="fw-bolder">{{$detailMobil->nama_mobil}}</h5>
                     <div class="rent-price mb-3">
                       <span style="font-size: 1rem" class="text-primary"
-                        >Rp.200.000/</span
+                        >Rp.{{$detailMobil->harga}}/</span
                       >day
                     </div>
                   </div>
@@ -79,19 +72,19 @@
                       class="border-bottom p-2 d-flex justify-content-between"
                     >
                       <span>Bahan Bakar</span>
-                      <span style="font-weight: 600">Bensin</span>
+                      <span style="font-weight: 600">{{$detailMobil->bahan_bakar}}</span>
                     </li>
                     <li
                       class="border-bottom p-2 d-flex justify-content-between"
                     >
                       <span>Jumlah Kursi</span>
-                      <span style="font-weight: 600">5</span>
+                      <span style="font-weight: 600">{{$detailMobil->jumlah_kursi}}</span>
                     </li>
                     <li
                       class="border-bottom p-2 d-flex justify-content-between"
                     >
                       <span>Transmisi</span>
-                      <span style="font-weight: 600">Manual</span>
+                      <span style="font-weight: 600">{{$detailMobil->jenis_transmisi}}</span>
                     </li>
                   </ul>
                 </div>

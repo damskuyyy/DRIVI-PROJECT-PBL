@@ -35,9 +35,11 @@ Route::prefix('/mobil')->group(function(){
     Route::delete('/delete/{id}',[MobilController::class, 'MobilDelete']);
 });
 
-// route review
+// route crud review
 Route::get('review',[ReviewController::class, 'index']);
 Route::post('review/add',[ReviewController::class, 'add']);
+Route::put('review/update/{id}',[ReviewController::class, 'Update']);
+Route::delete('review/delete/{id}',[ReviewController::class, 'Delete']);
 
 
 Route::prefix('/sewa')->group(function(){

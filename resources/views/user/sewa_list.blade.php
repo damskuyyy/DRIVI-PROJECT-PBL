@@ -1,15 +1,12 @@
 @extends('user.component.main')
 @section('content')
-<header class="bg-dark py-2">
-      <div class="container px-1 px-lg-2 my-2">
-        <div class="text-center text-white">
-          <h1 class="display-10 fw-bolder">Sewa Mobil</h1>
-          <p class="lead fw-normal text-white-15 mb-0">
-            hanya dengan satu sentuhan
-          </p>
-        </div>
-      </div>
-    </header>
+<!-- Masthead-->
+<header class="masthead bg-white text- dark text-center">
+            <div>
+            <p class="masthead-subheading font-weight-light mb-0">Daftar Sewa Mobil</p>
+            </div>
+        </header>
+
   <!-- Content Wrapper -->
   <div id="content-wrapper" class="d-flex flex-column">
 

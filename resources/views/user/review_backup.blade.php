@@ -1,4 +1,4 @@
-@extends('owner.component.main')
+@extends('user.component.main')
 
 @section('content')
 <div id="content-wrapper" class="d-flex flex-column">
@@ -30,7 +30,7 @@
                             <th>ID Mobil</th>
                             <th>Bintang</th>
                             <th>Komentar</th>
-                            <!-- <th>Action</th> -->
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tr>
@@ -39,16 +39,16 @@
                        <td>212</td>
                        <td>5</td>
                        <td>KECE ABIEZZZ</td>
-                       <!-- <td> -->
-                        <!-- <a href="#" class="btn btn-info">Edit</a>
+                       <td>
+                        <a href="#" class="btn btn-info">Edit</a>
                         <a href="#" id="delete" class="btn btn-danger">Delete</a>
-                         -->
-                       <!-- </td> -->
-                    <!-- </tr>
+                        
+                       </td>
+                    </tr>
                     <div class="box">
                     <div class="box-header with-border">
-                    <a href="#" style="float:left;" type="button" class="btn btn-rounded btn-dark mb-5">Tambah Review</a>
-                    </div> -->
+                    <a href= "#" style="float:left;" type="button" class="btn btn-rounded btn-dark mb-5">Tambah Review</a>
+                    </div>
                     <tbody>
                     </tbody>
                 </table>
