@@ -8,7 +8,7 @@
                 <p class="masthead-subheading font-weight-light mb-10">DRAIVI DIMARI SEWA MOBIL DISINI</p>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Jasa Rental Mobil Solusi Termudah dan Terpecaya di Banyuwangi</p>
+                <p class="masthead-subheading font-weight-light mb-0">Jasa Rental Mobil Solusi Termudah dan Terpercaya di Banyuwangi</p>
             </div>
         </header>
 
@@ -43,10 +43,10 @@
                   <!-- Product name-->
                       
                   {{-- <p>{{$key+1}}</p> --}}
-                  <h5 class="fw-bolder">Special Item</h5>
+                  <h5 class="fw-bolder">{{$mobil->nama_mobil}}</h5>
                   <!-- Product price-->
                   <div class="rent-price mb-3">
-                    <span class="text-primary">Rp.{{$mobil->harga}}/</span>day
+                    <span class="text-primary">Rp.{{$mobil->harga}}</span> / Day
                   </div>
                   <ul class="list-unstyled list-style-group">
                     <li

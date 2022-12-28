@@ -16,37 +16,20 @@
           <div class="col-lg-8 mb-5">
             <div class="card h-100">
               <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
-                alt="..."
-              />
+              @if ($detailMobil->mobil_photo_path != '')
+             <img style="height: 500px; " class="card-img-top" src="{{ asset ('storage/mobil/'.$detailMobil->mobil_photo_path)}}" alt="..."/>
+             
+             @else
+             <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
+                 
+             @endif
+              
               <!-- Product details-->
               <div class="card-body card-body-custom pt-4">
                 <div>
                   <!-- Product name-->
                   <h3 class="fw-bolder text-primary">Deskripsi</h3>
                   <p>{{$detailMobil->deskripsi}}</p>
-                  <div class="mobil-info-list border-top pt-4">
-                    <ul class="list-unstyled">
-                      <li>
-                        <i class="ri-checkbox-circle-line"></i>
-                        <span>P3K</span>
-                      </li>
-                      <li>
-                        <i class="ri-close-circle-line text-secondary"></i>
-                        <span>CHARGER</span>
-                      </li>
-                      <li>
-                        <i class="ri-close-circle-line text-secondary"></i>
-                        <span>AUDIO</span>
-                      </li>
-                      <li>
-                        <i class="ri-checkbox-circle-line"></i>
-                        <span>AC</span>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
               </div>
             </div>
@@ -63,8 +46,8 @@
                     <h5 class="fw-bolder">{{$detailMobil->nama_mobil}}</h5>
                     <div class="rent-price mb-3">
                       <span style="font-size: 1rem" class="text-primary"
-                        >Rp.{{$detailMobil->harga}}/</span
-                      >day
+                        >Rp.{{$detailMobil->harga}}</span
+                      > / Day
                     </div>
                   </div>
                   <ul class="list-unstyled list-style-group">
@@ -94,7 +77,7 @@
                 <div class="text-center">
                   <a
                     class="btn d-flex align-items-center justify-content-center btn-primary mt-auto"
-                    href="#"
+                    href="{{route('user.sewa_add',$detailMobil->id)}}"
                     style="column-gap: 0.4rem"
                     >Sewa Mobil <i class="ri-whatsapp-line"></i
                   ></a>
