@@ -66,7 +66,7 @@ Route::prefix('owner')->group(function () {
 
 Route::prefix('user')->group(function () {
     Route::get('/home', [MobilController::class, 'viewMobil'])->name('user.home');
-    Route::get('/detail/{id}', [MobilController::class, 'detailView'])->name('user.detail_mobil');
+    // Route::get('/detail/{id}', [MobilController::class, 'detailView'])->name('user.detail_mobil');
     Route::get('/contact', [AdminController::class, 'contact'])->name('user.contact');
     Route::get('/read', [UserReviewController::class, 'ReviewRead'])->name('user.read_review_mobil');
     Route::get('/add', [UserReviewController::class, 'ReviewAdd'])->name('user.add_review_mobil');

@@ -90,7 +90,7 @@
               <!-- Product image-->
              @if ($mobil->mobil_photo_path != '')
              <img
-             class="card-img-top" style="height: 200px; width 350px; object-fit: cover" src="{{ asset ('storage/mobil/'.$mobil->mobil_photo_path)}}" alt="..."/>
+             class="card-img-top" style="height: 200px; width: 350px; object-fit: cover" src="{{ asset ('storage/mobil/'.$mobil->mobil_photo_path)}}" alt="..."/>
              
              @else
              <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
@@ -137,7 +137,7 @@
                   <a class="btn btn-primary mt-auto"  href="https://wa.me/+6282172519703" target="blank">Sewa</a>
                   <a
                     class="btn btn-info mt-auto text-white"
-                    href="{{route('user.detail')}}"
+                    href="#"
                     >Detail</a
                   >
                 </div>
