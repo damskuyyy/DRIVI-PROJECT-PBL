@@ -74,6 +74,8 @@ Route::prefix('user')->group(function () {
     Route::get('/contact', [AdminController::class, 'contact'])->name('user.contact');
     Route::get('/transaksi/add/{id}',[SewaController::class, 'sewaAdd'])->name('user.sewa_add');
     Route::post('/transaksi/create',[SewaController::class, 'sewaCreate'])->name('user.sewa_mobil');
+    Route::get('/sewa/list', [SewaController::class, 'sewaList'])->name('user.sewa.list');
+
 });
 
 Route::get('/home',function(){

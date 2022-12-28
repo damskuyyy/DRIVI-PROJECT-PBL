@@ -32,7 +32,14 @@ class SewaController extends Controller
             $transaction -> tanggal_sewa = $request->tanggal_sewa;
             $transaction -> tanggal_pengembalian = $request->tanggal_pengembalian;
             $transaction->save();
-        return view ('user.index') -> with('Sukses');
+        // return view ('user.sewa_list', compact('user_id'));
+        return Redirect()->route('user.sewa.list');
 
+    }
+
+    public function sewaList(){
+        $user_id = Auth::user();
+        // return dd ($user);
+        return view('user.sewa_list', compact('user_id'));
     }
 }

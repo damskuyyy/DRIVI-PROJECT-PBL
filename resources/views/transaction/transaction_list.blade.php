@@ -53,7 +53,7 @@
                             <th>Metode Pembayaran</th>
                             <th>Status Pengembalian</th>
                             <th>Denda</th>
-                            <th>Status Transaksi</th>
+                            <th>Status Pemesanan</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>

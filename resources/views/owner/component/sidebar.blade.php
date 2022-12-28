@@ -61,9 +61,9 @@
         data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Transaksi:</h6>
-            <a class="collapse-item" href="{{ url ('owner/transaksi/list')}}">Penyewaan</a>
-            <a class="collapse-item" href="utilities-border.html">Pending</a>       {{--Buat Controller di Folder Owner sesuai nama fitur--}}
-            <a class="collapse-item" href="utilities-border.html">Tarik Dana</a>    {{--Buat Controller di Folder Owner sesuai nama fitur--}}
+            <a class="collapse-item" href="{{ url ('owner/transaksi/list')}}">Dipesan</a>
+            <a class="collapse-item" href="utilities-border.html">Proses Penyewaan</a>       {{--Buat Controller di Folder Owner sesuai nama fitur--}}
+            <a class="collapse-item" href="utilities-border.html">Penyewaan Selesai</a>    {{--Buat Controller di Folder Owner sesuai nama fitur--}}
         </div>
     </div>
 </li>

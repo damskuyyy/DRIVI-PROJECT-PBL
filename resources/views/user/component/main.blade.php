@@ -54,7 +54,10 @@
               <a class="nav-link active" href="{{url('user/home')}}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('user/contact')}}">Contact</a>
+              <a class="nav-link active" href="{{url('user/contact')}}">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{{url('user/sewa/list')}}">Daftar Sewa</a>
             </li>
             {{-- </li class="nav-item" class="nav-link">
             <a href="{{ url('/login')}}"><button type="button" class="btn btn-outline-dark" >LOGIN DISINI</button></a>
