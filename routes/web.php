@@ -59,9 +59,14 @@ Route::prefix('owner')->group(function () {
     Route::get('/add', [AddController::class, 'add'])->name('owner.add');
     Route::get('/list', [ListController::class, 'list'])->name('owner.list');
     Route::get('/review', [ReviewController::class, 'review'])->name('owner.review_mobil');
-    Route::get('/edit', [EditController::class, 'edit'])->name('owner.edit_mobil');
+    Route::get('/edit', [EditController::class, 'mobilEdit'])->name('owner.edit_mobil');
     Route::post('/store', [AddController::class, 'mobilStore'])->name('owner.mobilStore');
     Route::get('/transaksi/list', [TransactionController::class, 'listTransaksi'])->name('transaksi.list');
+    Route::get('/transaksi/listUpdate/{id}', [TransactionController::class, 'listUpdate'])->name('transaksi.listUpdate');
+    Route::get('/transaksi/listDenied/{id}', [TransactionController::class, 'listDenied'])->name('transaksi.listDenied');
+    Route::get('/transaksi/proses', [TransactionController::class, 'prosesTransaksi'])->name('transaksi.proses');
+    Route::get('/transaksi/proses/selesai/{id}', [TransactionController::class, 'prosesSelesai'])->name('transaksi.proses.selesai');
+    Route::get('/transaksi/selesai', [TransactionController::class, 'selesaiTransaksi'])->name('transaksi.selesai');
 });
     
 
@@ -91,6 +96,7 @@ Route::get('/home',function(){
 // Route Homepage
 // Route::get('/', [AdminController::class, 'home'])->name('admin.frontend.index');
 Route::get('user/detail/{id}', [AdminController::class, 'detail'])->name('user.detail');
+Route::get('index/detail/{id}', [AdminController::class, 'indexDetail'])->name('index.detail');
 Route::get('user/contact', [AdminController::class, 'contact'])->name('user.contact');
 
 

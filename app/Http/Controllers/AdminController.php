@@ -27,6 +27,10 @@ class AdminController extends Controller
         $detailMobil=Mobil::find($id);
         return view('user.detail',compact('detailMobil'));
     }
+    public function indexDetail($id){
+        $detailMobil=Mobil::find($id);
+        return view('user.index_detail',compact('detailMobil'));
+    }
 
     public function contact(){
         return view('user.contact');

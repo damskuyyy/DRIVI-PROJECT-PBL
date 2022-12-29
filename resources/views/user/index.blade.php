@@ -20,7 +20,8 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top">Draivi Web</a>
+                <img src="{{asset('img/logo_draivi.png')}}" style="height: 80px"/>
+                <a class="navbar-brand" href="#page-top">Draivi</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -121,10 +122,10 @@
               <!-- Product actions-->
               <div class="card-footer border-top-0 bg-transparent">
                 <div class="text-center">
-                  <a class="btn btn-primary mt-auto"  href="{{route('user.sewa_add',$mobil->id)}}" target="blank">Sewa</a>
+                  <a class="btn btn-primary mt-auto"  href="{{ url('/login')}}" target="blank">Sewa</a>
                   <a
                     class="btn btn-info mt-auto text-white"
-                    href="{{route('user.detail',$mobil->id)}}"
+                    href="{{route('index.detail',$mobil->id)}}"
                     target="blank">Detail</a>
                 </div>
               </div>
