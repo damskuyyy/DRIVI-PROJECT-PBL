@@ -14,13 +14,9 @@ class EditController extends Controller
         return view('owner.edit_mobil', compact('editData'));
        }
 
-       public function mobilUpdate(Request $request){
-        $validateData=$request->validate([
-            'email'=>'required|unique:users',
-            'textNama'=>'required',
-        ]);
+       public function mobilUpdate(Request $request, $id){
 
-        $id=$request->mobil;
+        
         $mobil= Mobil::find($id);
         // $mobil->user_id=$user_id->id;
         $mobil->nama_mobil=$request->nama_mobil;

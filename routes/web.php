@@ -60,6 +60,7 @@ Route::prefix('owner')->group(function () {
     Route::get('/list', [ListController::class, 'list'])->name('owner.list');
     Route::get('/review', [ReviewController::class, 'review'])->name('owner.review_mobil');
     Route::get('/edit/{id}', [EditController::class, 'mobilEdit'])->name('owner.edit_mobil');
+    Route::post('/update/{id}', [EditController::class, 'mobilUpdate'])->name('owner.update_mobil');
     Route::post('/store', [AddController::class, 'mobilStore'])->name('owner.mobilStore');
     Route::get('/transaksi/list', [TransactionController::class, 'listTransaksi'])->name('transaksi.list');
     Route::get('/transaksi/listUpdate/{id}', [TransactionController::class, 'listUpdate'])->name('transaksi.listUpdate');

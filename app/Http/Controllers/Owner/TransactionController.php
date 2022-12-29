@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 class TransactionController extends Controller
 {
     public function listTransaksi(){
-        $user = Auth::user();
+        $user = Transaction::all();
         // .Transaction::all();
         // return dd($user);
         return view('transaction.transaction_list', compact('user'));
@@ -38,7 +38,7 @@ class TransactionController extends Controller
     }
 
     public function prosesTransaksi(){
-        $user = Auth::user();
+        $user = Transaction::all();
         // .Transaction::all();
         // return dd($user);
         return view('transaction.transaction_proses', compact('user'));
@@ -56,7 +56,7 @@ class TransactionController extends Controller
     }
 
     public function selesaiTransaksi(){
-        $user = Auth::user();
+        $user = Transaction::all();
         // .Transaction::all();
         // return dd($user);
         return view('transaction.transaction_selesai', compact('user'));

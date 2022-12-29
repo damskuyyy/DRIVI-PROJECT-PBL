@@ -17,7 +17,7 @@
             <div class="card h-100">
               <!-- Product image-->
               @if ($detailMobil->mobil_photo_path != '')
-             <img style="height: 500px; " class="card-img-top" src="{{ asset ('storage/mobil/'.$detailMobil->mobil_photo_path)}}" alt="..."/>
+             <img style="height: 500px; " class="card-img-top" src="{{ asset ('storage/'.$detailMobil->mobil_photo_path)}}" alt="..."/>
              
              @else
              <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">

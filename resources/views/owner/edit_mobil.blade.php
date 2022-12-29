@@ -17,21 +17,21 @@
                     <h4 class="box-title">Edit Mobil</h4>
                   </div>
 
-                <form class="row g-3" method="post" action="{{route('owner.update_mobil')}}">
+                <form class="row g-3" method="post" action="{{route('owner.update_mobil',$editData->id)}}">
                   @csrf
                     <div class="col-md-6">
-                      <fieldset disabled>
-                        <label for="mobil" class="form-label">Id Mobil</label>
-                        <input type="text" class="form-control" value="{{$editData->id}}" id="mobil" name="mobil" required data-validation-required-message="This field is required" placeholder="id">
+                      <fieldset>
+                        <label for="id" class="form-label">Id Mobil</label>
+                        <input type="text" class="form-control" value="{{$editData->id}}" id="id" name="id" required data-validation-required-message="This field is required" placeholder="id">
                       </fieldset>                    
                     </div>
-                    <div class="col-md-6 ">
-                      <label for="mobil" class="form-label">Nama Mobil</label>
-                      <input type="text" class="form-control" value="{{$editData->nama_mobil}}" id="mobil" name="mobil" required data-validation-required-message="This field is required" >
+                    <div class="col-md-6 pt-4">
+                      <label for="nama_mobil" class="form-label">Nama Mobil</label>
+                      <input type="text" class="form-control" value="{{$editData->nama_mobil}}" id="nama_mobil" name="nama_mobil" required data-validation-required-message="This field is required" >
                     </div>
                     <div class="col-md-6 pt-4">
-                      <label for="jenis" class="form-label">Jenis Mobil</label>
-                      <input type="text" class="form-control" value="{{$editData->jenis_mobil}}" id="jenis" name="jenis" required data-validation-required-message="This field is required">
+                      <label for="jenis_mobil" class="form-label">Jenis Mobil</label>
+                      <input type="text" class="form-control" value="{{$editData->jenis_mobil}}" id="jenis_mobil" name="jenis_mobil" required data-validation-required-message="This field is required">
                     </div>
                     <div class="col-md-6 pt-4">
                         <label for="harga" class="form-label" >Harga</label>
@@ -41,15 +41,15 @@
                         </div>
                     </div>
                     <div class="col-md-6 pt-4">
-                      <label for="kursi" class="form-label">Jumlah Kursi</label>
-                      <input type="text" class="form-control" value="{{$editData->jumlah_kursi}}" id="kursi" name="kursi" required data-validation-required-message="This field is required">
+                      <label for="jumlah_kursi" class="form-label">Jumlah Kursi</label>
+                      <input type="text" class="form-control" value="{{$editData->jumlah_kursi}}" id="jumlah_kursi" name="jumlah_kursi" required data-validation-required-message="This field is required">
                     </div>
                     <div class="col-md-6 pt-4">
                       {{-- <label for="bahanBakar" class="form-label">Bahan Bakar</label> --}}
                       {{-- <input type="text" class="form-control" id="bahanBakar" name="bahanBakar" required data-validation-required-message="This field is required"> --}}
                       <div class="form-group">
-                        <label for="bahanBakar">Bahan Bakar</label>
-                        <select class="form-control" id="bahanBakar">
+                        <label for="bahan_bakar">Bahan Bakar</label>
+                        <select class="form-control" id="bahan_bakar" name="bahan_bakar">
                             <option selected>Pilih Bahan Bakar</option>
                             <option value="Bensin" {{($editData->bahan_bakar=="Bensin"?"selected":"")}}>Bensin</option>
                             <option value="Solar" {{($editData->bahan_bakar=="Solar"?"selected":"")}}>Solar</option>
@@ -58,8 +58,8 @@
                     </div>
                     <div class="col-md-6 pt-4">
                         <div class="form-group">
-                            <label for="bahanBakar">Jenis Transmisi</label>
-                            <select class="form-control" id="bahanBakar">
+                            <label for="jenis_transmisi">Jenis Transmisi</label>
+                            <select class="form-control" id="jenis_transmisi" name="jenis_transmisi">
                                 <option selected>Pilih Jenis Transmisi</option>
                                 <option value="Matic" {{($editData->jenis_transmisi=="Matic"?"selected":"")}}>Matic</option>
                                 <option value="Manual" {{($editData->jenis_transmisi=="Manual"?"selected":"")}}>Manual</option>
@@ -72,10 +72,10 @@
                       <textarea type="text" class="form-control" id="deskripsi" name="deskripsi" required data-validation-required-message="This field is required">{{$editData->deskripsi}}</textarea>
                     </div>
 
-                    <div class="input-group mb-3 pt-4 col-md-6">
+                    <div class="input-group pt-4 col-md-6">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="inputGroupFile02">
-                        <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">{{$editData->mobil_photo_path}}</label>
+                        <input type="file" class="custom-file-input" id="inputGroupFileAddon02">
+                        <label class="custom-file-label" for="inputGroupFileAddon02" aria-describedby="inputGroupFileAddon02">{{$editData->mobil_photo_path}}</label>
                       </div>
                       <div class="input-group-append">
                         <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>

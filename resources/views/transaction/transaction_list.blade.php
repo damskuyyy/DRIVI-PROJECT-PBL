@@ -69,7 +69,7 @@
                                 <tbody>
                                     {{-- <!-- @foreach ($user->transactionsuser as $key => $transaction) --> --}}
 
-                                    @foreach ($user->transactionsuser as $key => $transaction)
+                                    @foreach ($user as $key => $transaction)
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{ $transaction->user_id }}</td>

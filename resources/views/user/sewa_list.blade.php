@@ -86,7 +86,7 @@
                             <td>{{$transaction->status_transaksi}}</td>
                             
                             <td>
-                                <a href="{{ url ('user/sewa/edit',$transaction->id)}}" class="btn btn-dark" metho>Ubah Jadwal Sewa</a>
+                                <a href="{{ url ('user/sewa/edit',$transaction->id)}}" class="btn btn-dark mb-1" metho>Ubah Jadwal Sewa</a>
                                 <a href="{{ url ('user/sewa/delete',$transaction->id)}}" class="btn btn-warning" onclick="return confirm('Yakin ingin membatalkan pesanan?');" metho>Batalkan Pesanan</a>
                             </td>
                         </tr>
