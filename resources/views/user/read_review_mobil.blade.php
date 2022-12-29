@@ -44,7 +44,7 @@
                        <td>{{ $review->bintang }}</td>
                        <td>{{ $review->komentar }}</td>
                        <td>
-                        <a href="#" class="btn btn-info">Edit</a>
+                        <!-- <a href="#" class="btn btn-info">Edit</a> -->
                         <a href="{{ route('review.delete', $review->id) }}" id="delete" class="btn btn-danger">Delete</a>
                        </td>
                     </tr>

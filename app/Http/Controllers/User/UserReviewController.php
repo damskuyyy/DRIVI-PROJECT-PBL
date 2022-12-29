@@ -24,7 +24,7 @@ class UserReviewController extends Controller
             $data->bintang = $request->bintang;
             $data->komentar = $request->komentar;
             $data->save();
-            return redirect()->route('user.read_review_mobil')->with('info', 'Tambah Barang Berhasil');
+            return redirect()->route('user.read_review_mobil')->with('info', 'Tambah Review Berhasil');
     }
 
     public function ReviewDelete($id)
@@ -33,6 +33,6 @@ class UserReviewController extends Controller
         $deleteData->delete();
 
 
-        return redirect()->route('user.read_review_mobil')->with('info', 'Delete Barang Berhasil');
+        return redirect()->route('user.read_review_mobil')->with('info', 'Delete Review Berhasil');
     }
 }
