@@ -12,9 +12,9 @@ class MobilController extends Controller
     // view all
     public function MobilView()
     {
-        $user = Auth::user();
-        $mobil = Mobil::id_user();
-        return response()->json($mobil, 200);
+        // $user = Auth::user();
+        $data['allDataMobil'] = mobil::all();
+        return response()->json($data, 200);
     }
 
     // add
