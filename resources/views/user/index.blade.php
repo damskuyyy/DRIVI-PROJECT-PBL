@@ -72,8 +72,8 @@
           <div class="col mb-5">
             <div class="card h-100">
               <!-- Sale badge-->
-              <div class="badge badge-custom bg-warning text-white position-absolute" style="top: 0; right: 0">
-                Tidak Tersedia
+              <div class="badge badge-custom bg-success text-white position-absolute" style="top: 0; right: 0">
+                Tersedia
               </div>
               <!-- Product image-->
              @if ($mobil->mobil_photo_path != '')

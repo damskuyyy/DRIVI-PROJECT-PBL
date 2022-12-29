@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nama_mobil');
             $table->string('jenis_mobil');
             $table->integer('harga');
-            $table->string('deskripsi');
+            $table->text('deskripsi');
             $table->integer('jumlah_kursi');
             $table->string('bahan_bakar');
             $table->string('jenis_transmisi');
