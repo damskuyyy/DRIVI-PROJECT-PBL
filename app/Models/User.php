@@ -66,8 +66,8 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Mobil');
     }
 
-    public function transactionsuser()
+    public function transactions()
     {
-        return $this->hasMany('App\Models\Transaction');
+        return $this->hasMany(Transaction::class);
     }
 }
