@@ -19,7 +19,7 @@
 
                 <form class="row g-3" method="post" action="{{route('owner.update_mobil',$editData->id)}}">
                   @csrf
-                    <div class="col-md-6">
+                    <div hidden class="col-md-6">
                       <fieldset>
                         <label for="id" class="form-label">Id Mobil</label>
                         <input type="text" class="form-control" value="{{$editData->id}}" id="id" name="id" required data-validation-required-message="This field is required" placeholder="id">
@@ -71,17 +71,7 @@
                       <label for="deskripsi" class="form-label">Deskripsi Mobil</label>
                       <textarea type="text" class="form-control" id="deskripsi" name="deskripsi" required data-validation-required-message="This field is required">{{$editData->deskripsi}}</textarea>
                     </div>
-
-                    <div class="input-group pt-4 col-md-6">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="inputGroupFileAddon02">
-                        <label class="custom-file-label" for="inputGroupFileAddon02" aria-describedby="inputGroupFileAddon02" value="{{$editData->mobil_photo_path}}">{{$editData->mobil_photo_path}}</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
-                      </div>
-                    </div>
-                    
+                                      
                     <div class="col-12 pt-4">
                       <button type="submit" class="btn btn-dark col-12">Simpan Perubahan</button>
                     </div>

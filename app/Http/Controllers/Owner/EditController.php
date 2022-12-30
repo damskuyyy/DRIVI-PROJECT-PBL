@@ -26,7 +26,7 @@ class EditController extends Controller
         $mobil->jumlah_kursi=$request->jumlah_kursi;
         $mobil->bahan_bakar=$request->bahan_bakar;
         $mobil->jenis_transmisi=$request->jenis_transmisi;
-        $mobil->mobil_photo_path=$request->mobil_photo_path;
+        // $mobil->mobil_photo_path=$request->mobil_photo_path;
         // if($request->password!=""){
         //     $data->password=bcrypt($request->password);
         // }
