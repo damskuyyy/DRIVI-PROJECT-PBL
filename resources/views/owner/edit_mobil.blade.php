@@ -75,7 +75,7 @@
                     <div class="input-group pt-4 col-md-6">
                       <div class="custom-file">
                         <input type="file" class="custom-file-input" id="inputGroupFileAddon02">
-                        <label class="custom-file-label" for="inputGroupFileAddon02" aria-describedby="inputGroupFileAddon02">{{$editData->mobil_photo_path}}</label>
+                        <label class="custom-file-label" for="inputGroupFileAddon02" aria-describedby="inputGroupFileAddon02" value="{{$editData->mobil_photo_path}}">{{$editData->mobil_photo_path}}</label>
                       </div>
                       <div class="input-group-append">
                         <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>

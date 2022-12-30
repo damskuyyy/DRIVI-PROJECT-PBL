@@ -33,7 +33,7 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{url('user/sewa/list')}}">Daftar Sewa</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{url('user/review')}}">Review Mobil</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{url('/logout')}}">Logout</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#"><span class="mr-2 d-none d-lg-inline text-gray-600 small">nama role{{--$namaowner->name--}}</span>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#"><span class="mr-2 d-none d-lg-inline text-gray-600 small">{{--$user_id->name--}}</span>
                             <img class="img-profile rounded-circle"
                                 src="img/undraw_profile.svg">
                         </a></li>
