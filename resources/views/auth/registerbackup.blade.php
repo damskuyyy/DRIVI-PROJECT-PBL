@@ -39,7 +39,7 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back Draivi!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Register - Draivi!</h1>
                                     </div>
                                     <form method="POST" action="{{ route('register') }}" class="user">
                                             @csrf
@@ -58,15 +58,15 @@
                                                 id="exampleInputPassword" placeholder="Password" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" name="password"
+                                            <input type="password" class="form-control form-control-user" name="password_confirmation"
                                                 id="exampleInputPassword" placeholder="Password" />
                                         </div>
 
                                         <div class="form-group">
                                             <select id="type" class="form-select form-control" name="type">
                                               <option>Pilih Jenis Pengguna</option>
-                                              <option value="0">Penyewa</option>
-                                              <option value="1">Pemilik Jasa Sewa</option>
+                                              <option value="0">User</option>
+                                              <option value="1">Owner</option>
                                             </select>
                                         </div>
 
