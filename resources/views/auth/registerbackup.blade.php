@@ -85,11 +85,10 @@
                                                 </div>
                                             </x-jet-label>
                                         </div>
-                                    @endif
-{{--                                         
+                                    @endif                                        
                                          <a href="{{ ('admin.admin_master') }}" class="btn btn-dark btn-user btn-block">
                                             Login
-                                        </a> --}}
+                                        </a> 
                                         <hr>
                                         <!-- <a href="index.html" class="btn btn-google btn-user btn-block">
                                             <i class="fab fa-google fa-fw"></i> Login with Google
