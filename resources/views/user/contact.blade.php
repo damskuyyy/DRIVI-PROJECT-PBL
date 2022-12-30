@@ -2,14 +2,15 @@
 
 @section('content')
    
-    <!-- Header-->
-    <header class="bg-dark py-2">
-      <div class="container px-1 px-lg-2 my-2">
-        <div class="text-center text-white">
-          <h1 class="display-10 fw-bolder">Kontak Kami</h1>
-        </div>
-      </div>
-    </header>
+<!-- Masthead-->
+<header class="masthead bg-dark text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Heading-->
+                <p class="masthead-subheading font-weight-light mb-10">CONTACT</p>
+                </div>
+            </div>
+        </header>
+
     <!-- Section-->
     <section class="py-5">
       <div class="container px-4 px-lg-5 mt-5">

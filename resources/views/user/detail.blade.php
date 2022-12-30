@@ -3,14 +3,12 @@
 
 @section('content')
   
-    <!-- Header-->
-    <header class="bg-dark py-2">
-      <div class="container px-1 px-lg-2 my-2">
-        <div class="text-center text-white">
-          <h1 class="display-10 fw-bolder">Detail Mobil</h1>
-        </div>
-      </div>
-    </header>
+<!-- Masthead-->
+<header class="masthead bg-white text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+            </div>
+        </header>
+
     <!-- Section-->
     <section class="py-5">
       <div class="container px-4 px-lg-5 mt-5">
@@ -18,16 +16,20 @@
           <div class="col-lg-8 mb-5">
             <div class="card h-100">
               <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
-                alt="..."
-              />
+              @if ($detailMobil->mobil_photo_path != '')
+             <img style="height: 500px; " class="card-img-top" src="{{ asset ('storage/mobil/'.$detailMobil->mobil_photo_path)}}" alt="..."/>
+             
+             @else
+             <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
+                 
+             @endif
+              
               <!-- Product details-->
               <div class="card-body card-body-custom pt-4">
                 <div>
                   <!-- Product name-->
                   <h3 class="fw-bolder text-primary">Deskripsi</h3>
+<<<<<<< HEAD
                   <p>
                     {{$editData->deskripsi}}
                   </p>
@@ -51,6 +53,9 @@
                       </li>
                     </ul>
                   </div>
+=======
+                  <p>{{$detailMobil->deskripsi}}</p>
+>>>>>>> origin/transaksi
                 </div>
               </div>
             </div>
@@ -64,11 +69,11 @@
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
-                    <h5 class="fw-bolder">Special Item</h5>
+                    <h5 class="fw-bolder">{{$detailMobil->nama_mobil}}</h5>
                     <div class="rent-price mb-3">
                       <span style="font-size: 1rem" class="text-primary"
-                        >Rp.200.000/</span
-                      >day
+                        >Rp.{{$detailMobil->harga}}</span
+                      > / Day
                     </div>
                   </div>
                   <ul class="list-unstyled list-style-group">
@@ -76,19 +81,23 @@
                       class="border-bottom p-2 d-flex justify-content-between"
                     >
                       <span>Bahan Bakar</span>
+<<<<<<< HEAD
                       <span style="font-weight: 600">{{$mobil->bahan_bakar}}</span>
+=======
+                      <span style="font-weight: 600">{{$detailMobil->bahan_bakar}}</span>
+>>>>>>> origin/transaksi
                     </li>
                     <li
                       class="border-bottom p-2 d-flex justify-content-between"
                     >
                       <span>Jumlah Kursi</span>
-                      <span style="font-weight: 600">5</span>
+                      <span style="font-weight: 600">{{$detailMobil->jumlah_kursi}}</span>
                     </li>
                     <li
                       class="border-bottom p-2 d-flex justify-content-between"
                     >
                       <span>Transmisi</span>
-                      <span style="font-weight: 600">Manual</span>
+                      <span style="font-weight: 600">{{$detailMobil->jenis_transmisi}}</span>
                     </li>
                   </ul>
                 </div>
@@ -98,7 +107,7 @@
                 <div class="text-center">
                   <a
                     class="btn d-flex align-items-center justify-content-center btn-primary mt-auto"
-                    href="#"
+                    href="{{route('user.sewa_add',$detailMobil->id)}}"
                     style="column-gap: 0.4rem"
                     >Sewa Mobil <i class="ri-whatsapp-line"></i
                   ></a>

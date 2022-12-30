@@ -1,15 +1,12 @@
 @extends('user.component.main')
 @section('content')
-<header class="bg-dark py-2">
-      <div class="container px-1 px-lg-2 my-2">
-        <div class="text-center text-white">
-          <h1 class="display-10 fw-bolder">Sewa Mobil</h1>
-          <p class="lead fw-normal text-white-15 mb-0">
-            hanya dengan satu sentuhan
-          </p>
-        </div>
-      </div>
-    </header>
+<!-- Masthead-->
+<header class="masthead bg-white text- dark text-center">
+            <div>
+            <p class="masthead-subheading font-weight-light mb-0">Daftar Sewa Mobil</p>
+            </div>
+        </header>
+
   <!-- Content Wrapper -->
   <div id="content-wrapper" class="d-flex flex-column">
 
@@ -79,6 +76,7 @@
                             <td>{{$key+1}}</td>
                             <td>{{$transaction->user_id}}</td>
                             <td>{{$transaction->mobil_id}}</td>
+                            {{--<td>{{$transaction->nama_mobil}}</td>--}}
                             <td>{{$transaction->tanggal_transaksi}}</td>
                             <td>{{$transaction->tanggal_sewa}}</td>
                             <td>{{$transaction->tanggal_pengembalian}}</td>
@@ -88,8 +86,8 @@
                             <td>{{$transaction->status_transaksi}}</td>
                             
                             <td>
-                                <a href="{{ url ('owner/edit', '$transaction->id')}}" class="btn btn-dark" metho>Ubah Jadwal Sewa</a>
-                                <a href="{{ url ('owner/edit', '$transaction->id')}}" class="btn btn-warning" metho>Batalkan Pesanan</a>
+                                <a href="{{ url ('user/sewa/edit',$transaction->id)}}" class="btn btn-dark" metho>Ubah Jadwal Sewa</a>
+                                <a href="{{ url ('user/sewa/delete',$transaction->id)}}" class="btn btn-warning" onclick="return confirm('Yakin ingin membatalkan pesanan?');" metho>Batalkan Pesanan</a>
                             </td>
                         </tr>
                         @endforeach

@@ -20,15 +20,16 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top">Draivi Web</a>
+                <img src="{{asset('img/logo_draivi.png')}}" style="height: 80px"/>
+                <a class="navbar-brand" href="#page-top">Draivi</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#Aplication">Download App</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Album Cars</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#aplikasi">Download App</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#album">Album Cars</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url('/login')}}">Login</a></li>
                     </ul>
@@ -36,7 +37,7 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead bg-dark text-white text-center">
+        <header id="aplikasi" class="masthead bg-dark text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
                 <div class="img-fluid" style="width: 18rem;">
@@ -44,90 +45,96 @@
                  </div>
                 </div>
                 <!-- Masthead Heading-->
-                <p class="masthead-subheading font-weight-light mb-10">DRAIVI DIMARI SEWA MOBIL DISINI</p>
+                <p class="masthead-subheading font-weight-light mb-0">DRAIVI DIMARI SEWA MOBIL DISINI</p>
+                <p class="masthead-subheading font-weight-light mb-10">Jasa Rental Mobil Solusi Termudah dan Terpercaya di Banyuwangi</p>
                 <!-- Icon Divider-->
                 <!-- <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div> -->
-                    <!-- <div class="divider-custom-icon"><i class="fas fa-star"></i></div> -->
-                    <!-- <div class="divider-custom-line"></div>
+                    <!-- <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
                 </div> -->
                 </div>
-                <a class="btn btn-primary" href="{{ url('/login')}}" role="button">Daftarkan Sekarang</a>
                 <div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Jasa Rental Mobil Solusi Termudah dan Terpecaya di Banyuwangi</p>
+                <a class="btn btn-secondary" href="{{ url('/login')}}" role="button">Daftarkan Sekarang</a>
+                <a class="btn btn-secondary" href="" role="button">Download Aplikasi Mobile</a>
             </div>
         </header>
         <!-- Portfolio Section-->
-        <section class="page-section portfolio" id="portfolio">
-            <div class="container">
-                <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Album Cars</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
+       <!-- Section-->
+    <section class="py-5" id="album">
+      <div class="container px-4 px-lg-5 mt-5">
+        <h3 class="text-center mb-5">Daftar Mobil</h3>
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+          
+          @foreach ($allDataMobil as $key => $mobil)
+          <div class="col mb-5">
+            <div class="card h-100">
+              <!-- Sale badge-->
+              <div class="badge badge-custom bg-warning text-white position-absolute" style="top: 0; right: 0">
+                Tidak Tersedia
+              </div>
+              <!-- Product image-->
+             @if ($mobil->mobil_photo_path != '')
+             <img
+             class="card-img-top" style="height: 200px; width 350px; object-fit: cover" src="{{ asset ('storage/mobil/'.$mobil->mobil_photo_path)}}" alt="..."/>
+             
+             @else
+             <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
+                 
+             @endif
+             
+              <!-- Product details-->
+              <div class="card-body card-body-custom pt-4">
+                <div class="text-center">
+                  {{-- {{dd($allDataMobil)}} --}}
+                  <!-- Product name-->
+                      
+                  {{-- <p>{{$key+1}}</p> --}}
+                  <h5 class="fw-bolder">{{$mobil->nama_mobil}}</h5>
+                  <!-- Product price-->
+                  <div class="rent-price mb-3">
+                    <span class="text-primary">Rp.{{$mobil->harga}}</span> / Day
+                  </div>
+                  <ul class="list-unstyled list-style-group">
+                    <li
+                      class="border-bottom p-2 d-flex justify-content-between"
+                    >
+                      <span>Bahan bakar</span>
+                      <span style="font-weight: 600">{{$mobil->bahan_bakar}}</span>
+                    </li>
+                    <li
+                      class="border-bottom p-2 d-flex justify-content-between"
+                    >
+                      <span>Jumlah Kursi</span>
+                      <span style="font-weight: 600">{{$mobil->jumlah_kursi}}</span>
+                    </li>
+                    <li
+                      class="border-bottom p-2 d-flex justify-content-between"
+                    >
+                      <span>Transmisi</span>
+                      <span style="font-weight: 600">{{$mobil->jenis_transmisi}}</span>
+                    </li>
+                  </ul>
                 </div>
-                <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- Portfolio Item 1-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="{{ asset('page/assets/img/album/mobil1.png')}}" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 2-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="{{ asset('page/assets/img/album/mobil2.png')}}" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 3-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="{{ asset('page/assets/img/album/mobil3.png')}}" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 4-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="{{ asset('page/assets/img/album/mobil4.png')}}" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 5-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="{{ asset('page/assets/img/album/mobil5.png')}}" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 6-->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="{{ asset('page/assets/img/album/mobil6.png')}}" alt="..." />
-                        </div>
-                    </div>
+              </div>
+              <!-- Product actions-->
+              <div class="card-footer border-top-0 bg-transparent">
+                <div class="text-center">
+                  <a class="btn btn-primary mt-auto"  href="{{ url('/login')}}" target="blank">Sewa</a>
+                  <a
+                    class="btn btn-info mt-auto text-white"
+                    href="{{route('index.detail',$mobil->id)}}"
+                    target="blank">Detail</a>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+          @endforeach
+        </div>
+      </div>
+    </section> 
         <!-- About Section-->
 
         <!-- <section class="page-section bg-primary text-white mb-0" id="about">
@@ -220,7 +227,7 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+                            <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Send</button>
                         </form>
                     </div>
                 </div>
@@ -236,7 +243,7 @@
                         <p class="lead mb-0">
                             Based Banyuwangi Sunrise Of Java
                             <br />
-                        Group 2 Presesnt
+                        Group 2 Present
                         </p>
                     </div>
                     <!-- Footer Social Icons-->
@@ -252,8 +259,6 @@
                         <h4 class="text-uppercase mb-4">About Draivi</h4>
                         <p class="lead mb-0">
                             Draivi adalah sebuah website rental mobil sebagai project akhir semester 3
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
                         </p>
                     </div>
                 </div>
@@ -261,7 +266,7 @@
         </footer>
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; Your Website 2022</small></div>
+            <div class="container"><small>Copyright &copy; Novan Erdi Faqihul Fita Aghis</small></div>
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

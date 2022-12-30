@@ -1,7 +1,21 @@
     @extends('user.component.main')
 
     @section('content')
+<<<<<<< HEAD
  
+=======
+    <!-- Masthead-->
+    <header class="masthead bg-dark text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Heading-->
+                <p class="masthead-subheading font-weight-light mb-10">DRAIVI DIMARI SEWA MOBIL DISINI</p>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Jasa Rental Mobil Solusi Termudah dan Terpercaya di Banyuwangi</p>
+            </div>
+        </header>
+
+>>>>>>> origin/transaksi
     <!-- Section-->
     <section class="py-5">
       <div class="container px-4 px-lg-5 mt-5">
@@ -36,7 +50,7 @@
                   <h5 class="fw-bolder">{{$mobil->nama_mobil}}</h5>
                   <!-- Product price-->
                   <div class="rent-price mb-3">
-                    <span class="text-primary">Rp.{{$mobil->harga}}/</span>day
+                    <span class="text-primary">Rp.{{$mobil->harga}}</span> / Day
                   </div>
                   <ul class="list-unstyled list-style-group">
                     <li
@@ -66,9 +80,14 @@
                   <a class="btn btn-primary mt-auto"  href="{{route('user.sewa_add',$mobil->id)}}" target="blank">Sewa</a>
                   <a
                     class="btn btn-info mt-auto text-white"
+<<<<<<< HEAD
                     href="#"
                     >Detail</a
                   >
+=======
+                    href="{{route('user.detail',$mobil->id)}}"
+                    target="blank">Detail</a>
+>>>>>>> origin/transaksi
                 </div>
               </div>
             </div>
