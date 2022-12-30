@@ -13,7 +13,6 @@ class UserReviewController extends Controller
         return view('user.read_review_mobil', $data);
     }
 
-<<<<<<< HEAD
     public function ReviewAdd(){
         return view('user.add_review_mobil');
     }
@@ -37,9 +36,4 @@ class UserReviewController extends Controller
         return redirect()->route('user.read_review_mobil')->with('info', 'Delete Review Berhasil');
     }
 }
-=======
-    public function reviewAdd(){
-        return view('user.review_add');
-    }
-}
->>>>>>> origin/transaksi
+
