@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
+use App\Models\Mobil;
 
 class Transaction extends Model
 {
@@ -30,6 +31,11 @@ class Transaction extends Model
     public function usertransactions()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function NamaMobils()
+    {
+        return $this->hasMany(Mobil::class);
     }
 
 }

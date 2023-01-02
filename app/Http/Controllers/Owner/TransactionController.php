@@ -7,14 +7,19 @@ use App\Models\Transaction;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class TransactionController extends Controller
 {
     public function listTransaksi(){
-        $user = Transaction::all();
+        $users = DB::table('transactions')
+                ->where('status_transaksi', '=', 'Dipesan')
+                ->get();
+        // $user = Transaction::all();
+        // $NamaMobils = Transaction::all();
         // .Transaction::all();
         // return dd($user);
-        return view('transaction.transaction_list', compact('user'));
+        return view('transaction.transaction_list', compact('users'));
         // $dataTransaksi['allDataTransaksi'] = Transaction::all();
         // return view('transaction.transaction_list', $dataTransaksi);
     }
@@ -38,10 +43,13 @@ class TransactionController extends Controller
     }
 
     public function prosesTransaksi(){
-        $user = Transaction::all();
+        // $user = Transaction::all();
+        $users = DB::table('transactions')
+                ->where('status_transaksi', '=', 'Disetujui')
+                ->get();
         // .Transaction::all();
         // return dd($user);
-        return view('transaction.transaction_proses', compact('user'));
+        return view('transaction.transaction_proses', compact('users'));
         // $dataTransaksi['allDataTransaksi'] = Transaction::all();
         // return view('transaction.transaction_list', $dataTransaksi);
     }
@@ -56,10 +64,13 @@ class TransactionController extends Controller
     }
 
     public function selesaiTransaksi(){
-        $user = Transaction::all();
+        // $user = Transaction::all();
+        $users = DB::table('transactions')
+                ->where('status_transaksi', '=', 'Selesai')
+                ->get();
         // .Transaction::all();
         // return dd($user);
-        return view('transaction.transaction_selesai', compact('user'));
+        return view('transaction.transaction_selesai', compact('users'));
         // $dataTransaksi['allDataTransaksi'] = Transaction::all();
         // return view('transaction.transaction_list', $dataTransaksi);
     }

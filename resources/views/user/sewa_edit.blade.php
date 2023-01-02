@@ -37,11 +37,11 @@
                       <label for="mobil_id" class="form-label">mobil Id</label>
                       <input  type="text" class="form-control" id="mobil_id" name="mobil_id" value="{{$editData->id}}" required data-validation-required-message="Tidak boleh kosong" >
                     </div>
-                    <div class="col-md-6">
+                    <div hidden class="col-md-6">
                       <label for="nama_mobil" class="form-label">Nama Mobil</label>
                       <input  readonly type="text" class="form-control" id="nama_mobil" name="nama_mobil" value="{{$editData->nama_mobil}}" required data-validation-required-message="Tidak boleh kosong" >
                     </div>
-                    <div class="col-md-6">
+                    <div hidden class="col-md-6">
                       <label for="jenis_mobil" class="form-label">Jenis Mobil</label>
                       <input readonly type="text" class="form-control" id="jenis_mobil" name="jenis_mobil" value="{{$editData->jenis_mobil}}" required data-validation-required-message="Tidak boleh kosong">
                     </div>

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Mobil;
 use App\Models\Transaction;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 
 class SewaController extends Controller
@@ -38,15 +39,56 @@ class SewaController extends Controller
     }
 
     public function sewaList(){
+        // dipesan
         $user_id = Auth::user();
-        // return dd ($user);
-        return view('user.sewa_list', compact('user_id'));
+        // return dd($user_id);
+        $users = DB::table('mobils')
+           ->join('transactions', 'transactions.mobil_id', '=', 'mobils.id')
+           ->where('transactions.user_id', '=', $user_id->id)
+           ->where(function ($query) {
+               $query->where('transactions.status_transaksi', 'Dipesan');
+           })
+           ->get();
+
+        // disetujui
+        $users1 = DB::table('transactions')
+        ->where('transactions.user_id', '=', $user_id->id)
+        ->join('mobils', 'mobils.id', '=', 'transactions.mobil_id')
+        ->join('users', 'users.id','=','transactions.user_id')
+        ->where(function ($query) {
+            $query->where('transactions.status_transaksi', 'Disetujui');
+           })
+           ->get();
+           
+        // selesai
+        $users2 = DB::table('transactions')
+        ->where('transactions.user_id', '=', $user_id->id)
+        ->join('mobils', 'mobils.id', '=', 'transactions.mobil_id')
+        ->join('users', 'users.id','=','transactions.user_id')
+        ->where(function ($query) {
+            $query->where('transactions.status_transaksi', 'Selesai');
+           })
+           ->get();
+        
+        //ditolak
+        $users3 = DB::table('transactions')
+        ->where('transactions.user_id', '=', $user_id->id)
+        ->join('mobils', 'mobils.id', '=', 'transactions.mobil_id')
+        ->join('users', 'users.id','=','transactions.user_id')
+        ->where(function ($query) {
+            $query->where('transactions.status_transaksi', 'Ditolak');
+           })
+           ->get();
+           
+        // return dd ($users);
+        return view('user.sewa_list', compact('users','users1','users2','users3','user_id'));
     }
 
 
     public function sewaEdit($id){
         $user_id = Auth::user();
         $editData=Transaction::find($id);
+        // return dd($editData);
         return view('user.sewa_edit', compact('editData','user_id'));
        }
 

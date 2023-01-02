@@ -69,13 +69,13 @@
                 <tbody>
                        {{-- <!-- @foreach($user->transactionsuser as $key=> $transaction) --> --}} 
                     
-                        @foreach($user_id->transactionsuser as $key=> $transaction)
+                    @foreach($users as $key=> $transaction)
                         
-                        
+                        {{-- Booking --}}
                         <tr>
                             <td>{{$key+1}}</td>
-                            <td>{{$transaction->user_id}}</td>
-                            <td>{{$transaction->mobil_id}}</td>
+                            <td>{{$user_id->name}}</td>
+                            <td>{{$transaction->nama_mobil}}</td>
                             {{--<td>{{$transaction->nama_mobil}}</td>--}}
                             <td>{{$transaction->tanggal_transaksi}}</td>
                             <td>{{$transaction->tanggal_sewa}}</td>
@@ -87,7 +87,76 @@
                             
                             <td>
                                 <a href="{{ url ('user/sewa/edit',$transaction->id)}}" class="btn btn-dark mb-1" metho>Ubah Jadwal Sewa</a>
-                                <a href="{{ url ('user/sewa/delete',$transaction->id)}}" class="btn btn-warning" onclick="return confirm('Yakin ingin membatalkan pesanan?');" metho>Batalkan Pesanan</a>
+                                <a href="{{ url ('user/sewa/delete',$transaction->id)}}" class="btn btn-danger" onclick="return confirm('Yakin ingin membatalkan pesanan?');" metho>Batalkan Pesanan</a>
+                            </td>
+                        </tr>
+                        @endforeach
+
+                    {{-- Disetujui --}}
+                    @foreach($users1 as $key=> $transaction)
+                        
+                        
+                        <tr>
+                            <td>{{$key+1}}</td>
+                            <td>{{$user_id->name}}</td>
+                            <td>{{$transaction->nama_mobil}}</td>
+                            {{--<td>{{$transaction->nama_mobil}}</td>--}}
+                            <td>{{$transaction->tanggal_transaksi}}</td>
+                            <td>{{$transaction->tanggal_sewa}}</td>
+                            <td>{{$transaction->tanggal_pengembalian}}</td>
+                            <td>{{$transaction->metode_pembayaran}}</td>
+                            <td>{{$transaction->status_pengembalian}}</td>
+                            <td>{{$transaction->denda}}</td>
+                            <td>{{$transaction->status_transaksi}}</td>
+                            
+                            <td>
+                                <a href="#" class="btn btn-success m-1">Accepted</a>
+                            </td>
+                        </tr>
+                        @endforeach
+
+                        {{-- Ditolak --}}
+                    @foreach($users3 as $key=> $transaction)
+                        
+                        
+                    <tr>
+                        <td>{{$key+1}}</td>
+                        <td>{{$user_id->name}}</td>
+                        <td>{{$transaction->nama_mobil}}</td>
+                        {{--<td>{{$transaction->nama_mobil}}</td>--}}
+                        <td>{{$transaction->tanggal_transaksi}}</td>
+                        <td>{{$transaction->tanggal_sewa}}</td>
+                        <td>{{$transaction->tanggal_pengembalian}}</td>
+                        <td>{{$transaction->metode_pembayaran}}</td>
+                        <td>{{$transaction->status_pengembalian}}</td>
+                        <td>{{$transaction->denda}}</td>
+                        <td>{{$transaction->status_transaksi}}</td>
+                        
+                        <td>
+                            <a href="#" class="btn btn-danger m-1">Denied</a>
+                        </td>
+                    </tr>
+                    @endforeach
+                    
+                        {{-- Selesai --}}
+                    @foreach($users2 as $key=> $transaction)
+                        
+                        
+                        <tr>
+                            <td>{{$key+1}}</td>
+                            <td>{{$user_id->name}}</td>
+                            <td>{{$transaction->nama_mobil}}</td>
+                            {{--<td>{{$transaction->nama_mobil}}</td>--}}
+                            <td>{{$transaction->tanggal_transaksi}}</td>
+                            <td>{{$transaction->tanggal_sewa}}</td>
+                            <td>{{$transaction->tanggal_pengembalian}}</td>
+                            <td>{{$transaction->metode_pembayaran}}</td>
+                            <td>{{$transaction->status_pengembalian}}</td>
+                            <td>{{$transaction->denda}}</td>
+                            <td>{{$transaction->status_transaksi}}</td>
+                            
+                            <td>
+                                <a href="" class="btn btn-primary m-1" metho>Beri Ulasan</a>
                             </td>
                         </tr>
                         @endforeach
