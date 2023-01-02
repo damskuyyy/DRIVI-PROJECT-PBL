@@ -22,13 +22,17 @@ class TransactionController extends Controller
                 ->join('transactions', 'transactions.mobil_id', '=', 'mobils.id')
                 ->where('status_transaksi', '=', 'Dipesan')
                 ->get();
+        $users1 = DB::table('mobils')
+                ->join('transactions', 'transactions.mobil_id', '=', 'mobils.id')
+                ->where('status_transaksi', '=', 'Ditolak')
+                ->get();
 
                 
         // $user = Transaction::all();
         // $NamaMobils = Transaction::all();
         // .Transaction::all();
         // return dd($namausers);
-        return view('transaction.transaction_list', compact('users'));
+        return view('transaction.transaction_list', compact('users','users1'));
         // $dataTransaksi['allDataTransaksi'] = Transaction::all();
         // return view('transaction.transaction_list', $dataTransaksi);
     }
@@ -45,6 +49,7 @@ class TransactionController extends Controller
     public function listDenied($id){
         $user_id = Auth::user();
         $transaction = Transaction::find($id);
+        $transaction -> status_pengembalian = 'Ditolak Owner(Mobil Dalam Perbaikan)';
         $transaction -> status_transaksi = 'Ditolak';
         $transaction->save();
         return Redirect()->route('transaksi.list');

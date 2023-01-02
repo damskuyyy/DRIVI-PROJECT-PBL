@@ -93,6 +93,25 @@
                                             </td>
                                         </tr>
                                     @endforeach
+
+                                    @foreach ($users1 as $key => $transaction)
+                                        <tr>
+                                            <td>{{ $key + 1 }}</td>
+                                            <td>{{ $transaction->user_id }}</td>
+                                            <td>{{ $transaction->nama_mobil }}</td>
+                                            <td>{{ $transaction->tanggal_transaksi }}</td>
+                                            <td>{{ $transaction->tanggal_sewa }}</td>
+                                            <td>{{ $transaction->tanggal_pengembalian }}</td>
+                                            <td>{{ $transaction->metode_pembayaran }}</td>
+                                            <td>{{ $transaction->status_pengembalian }}</td>
+                                            <td>{{ $transaction->denda }}</td>
+                                            <td>{{ $transaction->status_transaksi }}</td>
+
+                                            <td>
+                                                <a href="#" class="btn btn-danger">Denied</a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
