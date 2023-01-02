@@ -68,6 +68,7 @@ Route::prefix('owner')->group(function () {
     Route::get('/transaksi/proses', [TransactionController::class, 'prosesTransaksi'])->name('transaksi.proses');
     Route::get('/transaksi/proses/selesai/{id}', [TransactionController::class, 'prosesSelesai'])->name('transaksi.proses.selesai');
     Route::get('/transaksi/selesai', [TransactionController::class, 'selesaiTransaksi'])->name('transaksi.selesai');
+
 });
     
 
@@ -85,8 +86,10 @@ Route::prefix('user')->group(function () {
     Route::get('/sewa/edit/{id}', [SewaController::class, 'sewaEdit'])->name('user.sewa_edit');
     Route::post('/sewa/update/{id}', [SewaController::class, 'sewaUpdate'])->name('user.sewa_update');
     Route::get('/sewa/delete/{id}',[SewaController::class, 'sewaDelete'])->name('user.sewa_delete');
-    Route::get('/review', [UserReviewController::class, 'review'])->name('user.review_mobil');
-    Route::get('/add', [UserReviewController::class, 'review'])->name('user.add_review_mobil');
+    Route::get('/read', [UserReviewController::class, 'ReviewRead'])->name('user.read_review_mobil');
+    Route::get('/add', [UserReviewController::class, 'ReviewAdd'])->name('user.add_review_mobil');
+    Route::post('/store', [UserReviewController::class, 'ReviewRequest'])->name('review.request');
+    Route::get('/delete/{id}', [UserReviewController::class, 'ReviewDelete'])->name('review.delete');
 });
 
 Route::get('/home',function(){

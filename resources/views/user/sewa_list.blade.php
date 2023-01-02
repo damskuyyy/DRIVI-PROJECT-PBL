@@ -156,7 +156,7 @@
                             <td>{{$transaction->status_transaksi}}</td>
                             
                             <td>
-                                <a href="" class="btn btn-primary m-1" metho>Beri Ulasan</a>
+                                <a href="{{url('user/add')}}" class="btn btn-primary m-1" metho>Beri Ulasan</a>
                             </td>
                         </tr>
                         @endforeach
