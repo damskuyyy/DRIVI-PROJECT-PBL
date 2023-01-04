@@ -5,19 +5,24 @@ namespace App\Http\Controllers\API\Owner;
 use App\Http\Controllers\Controller;
 use App\Models\Mobil;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MobilController extends Controller
 {
-    public function index()
+    // view all
+    public function MobilView()
     {
-        $mobil = Mobil::all();
+        $user = Auth::user();
+        $mobil = Mobil::id_user();
         return response()->json($mobil, 200);
     }
 
-    public function add(Request $request)
+    // add
+    public function MobilAdd(Request $request)
     {
         $validateData = $request->validate([
-            'id_detail_owner' => 'required',
+            
+            'user_id' => 'required',
             'nama_mobil' => 'required',
             'jenis_mobil' => 'required',
             'harga' => 'required',
@@ -27,9 +32,9 @@ class MobilController extends Controller
             'jenis_transmisi' => 'required',
         ]);
 
-        // create user
         $mobil = new Mobil([
-            'id_detail_owner' =>  $request->id_detail_owner,
+            // 'id_user' = Auth::user()->id;
+            'user_id' =>  $request->user_id,
             'nama_mobil' =>  $request->nama_mobil,
             'jenis_mobil' =>  $request->jenis_mobil,
             'harga' =>  $request->harga,
@@ -41,6 +46,29 @@ class MobilController extends Controller
 
         $mobil->save();
 
+        return response()->json($mobil, 201);
+    }
+
+    // update
+    public function MobilUpdate(Request $request, $id)
+    {
+        $mobil = mobil::find($id);
+        $mobil-> user_id = $request->input('user_id');
+        $mobil-> nama_mobil = $request->input('nama_mobil');
+        $mobil-> jenis_mobil = $request->input('jenis_mobil');
+        $mobil-> harga = $request->input('harga');
+        $mobil-> deskripsi = $request->input('deskripsi');
+        $mobil-> jumlah_kursi = $request->input('jumlah_kursi');
+        $mobil-> bahan_bakar = $request->input('bahan_bakar');
+        $mobil-> jenis_transmisi = $request->input('jenis_transmisi');
+        $mobil->save();
+
+        return response()->json($mobil, 201);
+    }
+
+    public function MobilDelete(Request $request, $id){
+        $mobil=mobil::find($id);
+        $mobil->delete();
         return response()->json($mobil, 201);
     }
 }

@@ -17,6 +17,12 @@
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
 </li>
+<!-- Nav Item - Dashboard -->
+<li class="nav-item active">
+    <a class="nav-link" href="{{url('/dashboard')}}">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Review Mobil</span></a>
+</li>
 <!-- Nav Item - Homepage Sewa -->
 {{-- <li class="nav-item active">
     <a class="nav-link" href="{{url('/dashboard')}}">
