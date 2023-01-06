@@ -2,10 +2,14 @@
 
 use App\Http\Controllers\API\Auth\AuthController;
 use App\Http\Controllers\API\Owner\MobilController;
+use App\Http\Controllers\API\Transaction\TransactionController;
 use App\Http\Controllers\API\Owner\ReviewController;
 use App\Http\Controllers\API\Owner\ReviewMobilController;
 use App\Models\ReviewMobil;
 use App\Http\Controllers\API\Owner\OwnerDetailController;
+use App\Http\Controllers\API\BarangController;
+use App\Http\Controllers\API\BolaController;
+use App\Http\Controllers\API\SoalController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -42,9 +46,12 @@ Route::put('review/update/{id}',[ReviewController::class, 'Update']);
 Route::delete('review/delete/{id}',[ReviewController::class, 'Delete']);
 
 
-
-
-
+Route::prefix('/sewa')->group(function(){
+    Route::get('/view',[TransactionController::class, 'TransactionView']);
+    Route::post('/add',[TransactionController::class, 'TransactionAdd']);
+    Route::put('/update/{id}',[TransactionController::class, 'TransactionUpdate']);
+    Route::delete('/delete/{id}',[TransactionController::class, 'TransactionDelete']);
+});
 Route::get('userDetail',[UserDetailController::class, 'index']);
 Route::post('userDetail/add',[UserDetailController::class, 'add']);
 
@@ -53,6 +60,23 @@ Route::group(['prefix' => 'owner'], function () {
         Route::get('OwnerDetail',[OwnerDetailController::class, 'index']);
         Route::post('OwnerDetail/add',[OwnerDetailController::class, 'add']);
         Route::put ('OwnerDetail/update/{id}', [OwnerDetailController::class, 'update']);
-        Route::post('OwnerDetail/delete', [OwnerDetailController::class, 'delete']);
+        Route::delete('delete/{id}', [OwnerDetailController::class, 'delete']);
     });
-// });
+Route::prefix('/barang')->group(function(){
+    Route::get('/view',[BarangController::class, 'BarangView']);
+    Route::post('/add',[BarangController::class, 'BarangAdd']);
+    Route::put('/update/{id}',[BarangController::class, 'BarangUpdate']);
+    Route::delete('/delete/{id}',[BarangController::class, 'BarangDelete']);
+});
+Route::prefix('/bola')->group(function(){
+    Route::get('/view',[BolaController::class, 'BolaView']);
+    Route::post('/add',[BolaController::class, 'BolaAdd']);
+    Route::put('/update/{id}',[BolaController::class, 'BolaUpdate']);
+    Route::delete('/delete/{id}',[BolaController::class, 'BolaDelete']);
+});
+Route::prefix('/soal')->group(function(){
+    Route::get('/view',[SoalController::class, 'SoalView']);
+    Route::post('/add',[SoalController::class, 'SoalAdd']);
+    Route::put('/update/{id}',[SoalController::class, 'SoalUpdate']);
+    Route::delete('/delete/{id}',[SoalController::class, 'SoalDelete']);
+});

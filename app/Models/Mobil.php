@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Transaction;
 
 class Mobil extends Model
 {
@@ -17,4 +18,10 @@ class Mobil extends Model
     {
         return $this->belongsTo('App\Models\Users');
     }
+
+    public function InversTransaksi(){
+
+        return $this->belongsTo(Transaction::class);
+    }
+
 }

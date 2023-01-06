@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Ownerdetail extends Model
 {
     use HasFactory;
-    protected $fillable = ['id_detail_user','id_mobil','bintang','komentar'];
+    protected $fillable = ['id_user','no_telpon','alamat','nama_perusahaan'];
+    // protected $table = 'ownerdetails';
 }

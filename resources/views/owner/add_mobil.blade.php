@@ -71,7 +71,7 @@
                       <textarea type="text" class="form-control" id="deskripsi" name="deskripsi" required data-validation-required-message="Tidak boleh kosong" placeholder="Tulis Deskripsi Mobil"></textarea>
                     </div>
                     <div class="mb-3">
-                      <label for="photo" class="form-label">Default file input example</label>
+                      <label for="photo" class="form-label">Pilih Foto Mobil</label>
                       <input class="form-control" type="file" id="photo" name="photo">
                     </div>
                     

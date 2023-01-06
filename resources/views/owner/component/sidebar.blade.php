@@ -61,19 +61,14 @@
         data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Transaksi:</h6>
-            <a class="collapse-item" href="utilities-color.html">Penyewaan</a>      {{--Buat Controller di Folder Owner sesuai nama fitur--}}
-            <a class="collapse-item" href="utilities-border.html">Pending</a>       {{--Buat Controller di Folder Owner sesuai nama fitur--}}
-            <a class="collapse-item" href="utilities-border.html">Tarik Dana</a>    {{--Buat Controller di Folder Owner sesuai nama fitur--}}
+            <a class="collapse-item" href="{{ url ('owner/transaksi/list')}}">Pending</a>
+            <a class="collapse-item" href="{{ url ('owner/transaksi/proses')}}">Proses Penyewaan</a>       {{--Buat Controller di Folder Owner sesuai nama fitur--}}
+            <a class="collapse-item" href="{{ url ('owner/transaksi/selesai')}}">Selesai</a>    {{--Buat Controller di Folder Owner sesuai nama fitur--}}
         </div>
     </div>
 </li>
 
-<!-- Nav Item - Tables -->
-<li class="nav-item">
-    <a class="nav-link" href="tables.html">
-        <i class="fas fa-fw fa-table"></i>
-        <span>Tables</span></a>
-</li>
+
 
 <!-- Sidebar Toggler (Sidebar) -->
 <div class="text-center d-none d-md-inline">

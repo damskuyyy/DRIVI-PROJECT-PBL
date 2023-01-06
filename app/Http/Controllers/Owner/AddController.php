@@ -19,7 +19,7 @@ class AddController extends Controller
         // nama fiel sesuai yang di setup
         $extension = $request->file('photo')->getClientOriginalExtension(); //mengambil extensi asli file
         $newName = $request->nama_mobil.'-'.now()->timestamp.'.'.$extension;  //rename file
-        $request->file('photo')->storeAs('mobil', $newName); //path file
+        $request->file('photo')->storeAs('public', $newName); //path file
 
         // nama file random
         // return $path = $request->file('photo')->store('mobil'); //nama file random
