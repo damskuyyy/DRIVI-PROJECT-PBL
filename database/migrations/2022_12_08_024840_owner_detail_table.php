@@ -13,7 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('ownerdetails', function (Blueprint $table) {
+            $table->id();
+            $table->string('no_telpon', 45)->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('nama_perusahaan');
+            $table->timestamps();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        });
     }
 
     /**
@@ -23,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('ownerdetails');
     }
 };

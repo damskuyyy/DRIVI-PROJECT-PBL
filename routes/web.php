@@ -37,15 +37,15 @@ use function PHPSTORM_META\type;
 //     return view('welcome');
 // });
 
-// Route::middleware([
-//     'auth:sanctum',
-//     config('jetstream.auth_session'),
-//     'verified'
-// ])->group(function () {
-//     Route::get('/dashboard', function () {
-//         return view('admin.admin_master');
-//     })->name('dashboard');
-// });
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/detail', function () {
+        return view('owner.ownerdetail');
+    })->name('dashboard');
+});
 
 Route::get('/', [HomeController::class, 'checkUserType']);
     
@@ -68,6 +68,7 @@ Route::prefix('owner')->group(function () {
     Route::get('/transaksi/proses', [TransactionController::class, 'prosesTransaksi'])->name('transaksi.proses');
     Route::get('/transaksi/proses/selesai/{id}', [TransactionController::class, 'prosesSelesai'])->name('transaksi.proses.selesai');
     Route::get('/transaksi/selesai', [TransactionController::class, 'selesaiTransaksi'])->name('transaksi.selesai');
+    // Route::get('/detail', [OwnerDetailController::class 'viewDetail'])->name('owner.details');
 
 });
     

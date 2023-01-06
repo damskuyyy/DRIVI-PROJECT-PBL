@@ -7,11 +7,9 @@
     </button>
 
     <!-- Topbar Search -->
-    <form
-        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
         <div class="input-group">
-            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                aria-label="Search" aria-describedby="basic-addon2">
+            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
             <div class="input-group-append">
                 <button class="btn btn-dark" type="button">
                     <i class="fas fa-search fa-sm"></i>
@@ -25,18 +23,14 @@
 
         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
         <li class="nav-item dropdown no-arrow d-sm-none">
-            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-search fa-fw"></i>
             </a>
             <!-- Dropdown - Messages -->
-            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                aria-labelledby="searchDropdown">
+            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
                 <form class="form-inline mr-auto w-100 navbar-search">
                     <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small"
-                            placeholder="Search for..." aria-label="Search"
-                            aria-describedby="basic-addon2">
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                         <div class="input-group-append">
                             <button class="btn btn-primary" type="button">
                                 <i class="fas fa-search fa-sm"></i>
@@ -49,15 +43,13 @@
 
         <!-- Nav Item - Alerts -->
         <li class="nav-item dropdown no-arrow mx-1">
-            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell fa-fw"></i>
                 <!-- Counter - Alerts -->
                 <span class="badge badge-danger badge-counter">3+</span>
             </a>
             <!-- Dropdown - Alerts -->
-            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                aria-labelledby="alertsDropdown">
+            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                 <h6 class="dropdown-header">
                     Alerts Center
                 </h6>
@@ -100,22 +92,19 @@
 
         <!-- Nav Item - Messages -->
         <li class="nav-item dropdown no-arrow mx-1">
-            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-envelope fa-fw"></i>
                 <!-- Counter - Messages -->
                 <span class="badge badge-danger badge-counter">7</span>
             </a>
             <!-- Dropdown - Messages -->
-            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                aria-labelledby="messagesDropdown">
+            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                 <h6 class="dropdown-header">
                     Message Center
                 </h6>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                     <div class="dropdown-list-image mr-3">
-                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                            alt="...">
+                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
                         <div class="status-indicator bg-success"></div>
                     </div>
                     <div class="font-weight-bold">
@@ -126,8 +115,7 @@
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                     <div class="dropdown-list-image mr-3">
-                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                            alt="...">
+                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
                         <div class="status-indicator"></div>
                     </div>
                     <div>
@@ -138,8 +126,7 @@
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                     <div class="dropdown-list-image mr-3">
-                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                            alt="...">
+                        <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
                         <div class="status-indicator bg-warning"></div>
                     </div>
                     <div>
@@ -150,8 +137,7 @@
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                     <div class="dropdown-list-image mr-3">
-                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                            alt="...">
+                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="...">
                         <div class="status-indicator bg-success"></div>
                     </div>
                     <div>
@@ -168,16 +154,29 @@
 
         <!-- Nav Item - User Information -->
         <li class="nav-item dropdown no-arrow">
-            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">nama role{{--$namaowner->name--}}</span>
-                <img class="img-profile rounded-circle"
-                    src="img/undraw_profile.svg">
+                @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+                <button class="flex text-sm border-0 border-transparent rounded-circle" style="width:50px;
+   height:50px">
+                    <img class="card-img-top" style="object-fit: cover;" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
+                </button>
+                @else
+                <span class="inline-flex rounded-md">
+                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
+                        {{ Auth::user()->name }}
+
+                        <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </span>
+                @endif
             </a>
             <!-- Dropdown - User Information -->
-            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="{{('admin/profile')}}">
+            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="{{ route('profile.show') }}">
+
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
                 </a>
