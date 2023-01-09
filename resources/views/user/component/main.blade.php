@@ -33,7 +33,7 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{url('user/sewa/list')}}">Daftar Sewa</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{url('user/read')}}">Review Mobil</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{url('/logout')}}">Logout</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('profile.show') }}"><span class="mr-2 d-none d-lg-inline text-gray-600 small">{{--$user_id->name--}}</span>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('view.userdetail', Auth::user()->id) }}"><span class="mr-2 d-none d-lg-inline text-gray-600 small">{{--$user_id->name--}}</span>
                         @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                 <button class="flex text-sm border-0 border-transparent rounded-circle" style="width:50px;
    height:50px">

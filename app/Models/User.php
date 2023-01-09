@@ -75,4 +75,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Transaction::class);
     }
+    public function userdetail(){
+        return $this->hasOne(UserDetail::class, 'id_user');
+    }
 }

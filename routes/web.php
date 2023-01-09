@@ -15,8 +15,7 @@ use App\Http\Controllers\Owner\TransactionController;
 
 use App\Http\Controllers\User\MobilController;
 use App\Http\Controllers\User\SewaController;
-
-
+use App\Http\Controllers\User\UserDetailController;
 use App\Http\Controllers\User\UserReviewController;
 use Illuminate\Support\Facades\Auth as Auth;
 
@@ -91,6 +90,7 @@ Route::prefix('user')->group(function () {
     Route::get('/add', [UserReviewController::class, 'ReviewAdd'])->name('user.add_review_mobil');
     Route::post('/store', [UserReviewController::class, 'ReviewRequest'])->name('review.request');
     Route::get('/delete/{id}', [UserReviewController::class, 'ReviewDelete'])->name('review.delete');
+    Route::get('/userdetail/{id}', [UserDetailController::class, 'view'])->name('view.userdetail');
 });
 
 Route::get('/home',function(){

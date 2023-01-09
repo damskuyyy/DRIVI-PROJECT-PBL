@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class UserDetail extends Model
 {
     use HasFactory;
+    protected $table = 'userdetail';
     public function user()
     {
-        return $this->belongsTo('App\Models\Users');
+        return $this->belongsTo(User::class, 'id_user', 'id');
     }
 }
