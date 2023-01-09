@@ -11,6 +11,7 @@ use App\Http\Controllers\Owner\DeleteController;
 use App\Http\Controllers\Owner\EditController;
 use App\Http\Controllers\Owner\ListController;
 use App\Http\Controllers\Owner\OwnerController;
+use App\Http\Controllers\Owner\OwnerDetailController;
 use App\Http\Controllers\Owner\TransactionController;
 
 use App\Http\Controllers\User\MobilController;
@@ -67,6 +68,7 @@ Route::prefix('owner')->group(function () {
     Route::get('/transaksi/proses', [TransactionController::class, 'prosesTransaksi'])->name('transaksi.proses');
     Route::get('/transaksi/proses/selesai/{id}', [TransactionController::class, 'prosesSelesai'])->name('transaksi.proses.selesai');
     Route::get('/transaksi/selesai', [TransactionController::class, 'selesaiTransaksi'])->name('transaksi.selesai');
+    Route::get('/ownerdetail/{id}', [OwnerDetailController::class, 'view'])->name('view.ownerdetail');
     // Route::get('/detail', [OwnerDetailController::class 'viewDetail'])->name('owner.details');
 
 });

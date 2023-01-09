@@ -68,7 +68,7 @@ class User extends Authenticatable
 
     public function ownerdetail()
     {
-        return $this->hasOne('App\Models\OwnerDetail');
+        return $this->hasOne(OwnerDetail::class);
     }
 
     public function transactionsuser()

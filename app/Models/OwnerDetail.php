@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class OwnerDetail extends Model
 {
     use HasFactory;
-
+    protected $table = 'ownerdetails';
     public function user()
     {
-        return $this->belongsTo('App\Models\Users');
+        return $this->belongsTo(User::class, 'id_user', 'id');
     }
 }
 
