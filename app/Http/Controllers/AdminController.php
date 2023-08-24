@@ -12,7 +12,7 @@ class AdminController extends Controller
     //
     public function logout(){
     FacadesAuth::logout();
-        return Redirect()->route('login');
+        return Redirect()->route('user.index');
     }
 
     public function index (){

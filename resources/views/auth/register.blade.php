@@ -38,6 +38,7 @@
                             <div class="col-lg-12">
                                 <div class="p-12">
                                     <div class="text-center">
+                                        <img src="{{asset('img/logo.png')}}"  alt="Deskripsi Gambar" width="160">
                                         <h1 class="h4 text-gray-900 mb-4">Register - Draivi!</h1>
                                     </div>
                                     <form method="POST" action="{{ route('register') }}" class="user">

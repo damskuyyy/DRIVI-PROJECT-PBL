@@ -65,7 +65,7 @@
                         @foreach($user->mobils as $key=> $mobil)
 							<tr>
 								<td>{{$key+1}}</td>
-								<td><img src="{{ asset ('storage/'.$mobil->mobil_photo_path)}}" alt="" width="100px"></td>
+								<td><img src="{{ asset ('storage/'.$mobil->mobil_photo_path)}}" width="100px"></td>
 								<td>{{$mobil->nama_mobil}}</td>
 								<td>{{$mobil->jenis_mobil}}</td>
 								<td>{{$mobil->harga}}</td>
