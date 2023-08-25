@@ -20,8 +20,8 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <img src="{{asset('img/logo_draivi.png')}}" style="height: 80px"/>
-                <a class="navbar-brand" href="#page-top">Draivi</a>
+                <img src="{{asset('img/logo_draivi.png')}}" style="height: 60px"/>
+                <a class="navbar-brand text-center" href="#page-top" style="font-size: 20px;">Draivi</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -32,14 +32,8 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{url('user/contact')}}">Contact</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{url('user/sewa/list')}}">Daftar Sewa</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{url('user/read')}}">Review Mobil</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{url('/logout')}}">Logout</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#"><span class="mr-2 d-none d-lg-inline text-gray-600 small">{{--$user_id->name--}}</span>
-                            <img class="img-profile rounded-circle"
-                                src="img/undraw_profile.svg">
-                        </a></li>
-
-
-                      </ul>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link btn btn-primary mt-2 rounded" href="{{ url('/logout')}}">Logout</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -81,7 +75,7 @@
 
         </footer>
         <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
+        <div class="copyright py-4 text-center text-white bg-black">
             <div class="container"><small>Copyright &copy; Novan Erdi Faqihul Fita Aghis</small></div>
         </div>
         <!-- Bootstrap core JS-->

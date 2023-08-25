@@ -2,13 +2,11 @@
 
     @section('content')
     <!-- Masthead-->
-    <header class="masthead bg-dark text-white text-center">
+    <header class="masthead bg-black text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Heading-->
-                <p class="masthead-subheading font-weight-light mb-10">DRAIVI DIMARI SEWA MOBIL DISINI</p>
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Jasa Rental Mobil Solusi Termudah dan Terpercaya di Banyuwangi</p>
+                <h1 class="masthead-subheading font-weight-light mb-0 mt-5">DRAIVI DIMARI SEWA MOBIL DISINI</h1>
+                <p class="masthead-subheading font-weight-light mb-10 mt-2">Jasa Rental Mobil Solusi Termudah dan Terpercaya di Banyuwangi</p>
             </div>
         </header>
 

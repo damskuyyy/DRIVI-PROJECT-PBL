@@ -20,46 +20,40 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <img src="{{asset('img/logo_draivi.png')}}" style="height: 80px"/>
-                <a class="navbar-brand" href="#page-top">Draivi</a>
+                <img src="{{asset('img/logo_draivi.png')}}" style="height: 60px"/>
+                <a class="navbar-brand text-center" href="#page-top" style="font-size: 20px;">Draivi</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#aplikasi">Download App</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#album">Album Cars</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url('/login')}}">Login</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-2 rounded" href="https://play.google.com/store/apps">Download App</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-2 rounded" href="#album">Album Cars</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-2 rounded" href="#contact">Contact</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link btn btn-primary mt-2 rounded" href="{{ url('/login')}}">Login</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
-        <header id="aplikasi" class="masthead bg-dark text-white text-center">
+        <header id="aplikasi" class="masthead text-white text-center" style="background-image: url('{{('img/poto.jpg')}}'); background-size: cover;">
             <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <div class="img-fluid" style="width: 18rem;">
-                <img class="img-fluid" src="{{('page/assets/img/profile.page.png')}}" alt="..." />
-                 </div>
+                <!-- Masthead Avatar Image -->
+                {{-- <div class="img-fluid" style="width: 20rem;">
+                    <img class="img-fluid" src="{{('page/assets/img/profile.page.png')}}" alt="..." />
+                </div> --}}
+                <!-- Masthead Heading -->
+                <h1 class="masthead-subheading font-weight-light mb-0 mt-5">DRAIVI DIMARI SEWA MOBIL DISINI</h1>
+                <p class="masthead-subheading font-weight-light mb-10 mt-2">Jasa Rental Mobil Solusi Termudah dan Terpercaya di Banyuwangi</p>
+                <!-- Masthead Subheading -->
+                <div class="btn">
+                    <a class="btn btn-secondary mt-5" href="{{ url('/login')}}" role="button">Daftarkan Sekarang</a>
+                    <a class="btn btn-secondary mt-5" href="https://play.google.com/store/apps" role="button">Download Aplikasi Mobile</a>
                 </div>
-                <!-- Masthead Heading-->
-                <p class="masthead-subheading font-weight-light mb-0">DRAIVI DIMARI SEWA MOBIL DISINI</p>
-                <p class="masthead-subheading font-weight-light mb-10">Jasa Rental Mobil Solusi Termudah dan Terpercaya di Banyuwangi</p>
-                <!-- Icon Divider-->
-                <!-- <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div> -->
-                    <!-- <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div> -->
-                </div>
-                <div>
-                <!-- Masthead Subheading-->
-                <a class="btn btn-secondary" href="{{ url('/login')}}" role="button">Daftarkan Sekarang</a>
-                <a class="btn btn-secondary" href="" role="button">Download Aplikasi Mobile</a>
             </div>
         </header>
+        
         <!-- Portfolio Section-->
        <!-- Section-->
     <section class="py-5" id="album">
@@ -258,14 +252,15 @@
                     <div class="col-lg-4">
                         <h4 class="text-uppercase mb-4">About Draivi</h4>
                         <p class="lead mb-0">
-                            Draivi adalah sebuah website rental mobil sebagai project akhir semester 3
+                            {{-- Draivi adalah sebuah website rental mobil sebagai project akhir semester 3 --}}
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
         <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
+        <div class="copyright py-4 text-center text-white bg-black">
             <div class="container"><small>Copyright &copy; Novan Erdi Faqihul Fita Aghis</small></div>
         </div>
         <!-- Bootstrap core JS-->

@@ -155,7 +155,7 @@
   </div>
 </footer>
 <!-- Copyright Section-->
-<div class="copyright py-4 text-center text-white">
+<div class="copyright py-4 text-center text-white bg-black">
   <div class="container"><small>Copyright &copy; Novan Erdi Faqihul Fita Aghis</small></div>
 </div>
 <!-- Bootstrap core JS-->

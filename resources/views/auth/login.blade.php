@@ -40,8 +40,10 @@
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
+                                        <img src="{{asset('img/logo.png')}}"  alt="Deskripsi Gambar" width="160" >
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back Draivi!</h1>
                                     </div>
+                                    
                                     <form action="{{ route('login') }}" method="post" class="user">
                                             @csrf
                                         <div class="form-group">
